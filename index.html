@@ -159,12 +159,13 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
 .stat-l{font-size:.79rem;color:var(--muted);margin-top:8px;line-height:1.45;}
 
 /* ---------- about ---------- */
-.about-grid{display:grid;grid-template-columns:1.5fr .78fr;gap:40px;align-items:start;margin-top:32px;}
-.about-title{max-width:12ch;}
-.about-body{max-width:60ch;}
+.about-grid{display:grid;grid-template-columns:1.5fr .78fr;gap:40px;align-items:center;margin-top:32px;}
+.about-body{max-width:58ch;}
 .about-body p{font-size:1.02rem;line-height:1.74;}
 .about-body p:last-child{margin-bottom:0;}
 .about-body strong{color:var(--ink);font-weight:600;}
+.about-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;}
+.about-tag{font-size:.82rem;font-weight:600;padding:6px 13px;border-radius:999px;background:var(--soft);border:1px solid var(--line);color:var(--muted);}
 .about-side{max-width:360px;margin-left:auto;}
 .portrait{
   width:100%;aspect-ratio:1/.94;object-fit:cover;object-position:center 22%;
@@ -369,7 +370,7 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
   <div class="wrap">
     <div class="rv">
       <div class="eyebrow">About me</div>
-      <h2 class="s-title about-title">Product decisions, backed by data I can build myself.</h2>
+      <h2 class="s-title">Where product judgment meets technical depth.</h2>
     </div>
     <div class="about-grid">
       <div class="about-body rv">
@@ -389,6 +390,14 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
           an internal LLM self-service analytics product used by 100 non-technical users. The kind of
           PM work I enjoy most is turning complex data into decisions people can actually use.
         </p>
+        <div class="about-tags">
+          <span class="about-tag">Roadmap ownership</span>
+          <span class="about-tag">Enterprise SaaS</span>
+          <span class="about-tag">0→1 &amp; scale</span>
+          <span class="about-tag">Geospatial AI</span>
+          <span class="about-tag">Prioritization</span>
+          <span class="about-tag">Data-informed decisions</span>
+        </div>
       </div>
       <div class="rv about-side">
       <img class="portrait" src="nitish.jpg" alt="Nitish Ranjan" loading="lazy">
