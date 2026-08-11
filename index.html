@@ -53,6 +53,7 @@ p{margin:0 0 1.05rem;}
 
 /* ---------- section scaffolding ---------- */
 section{padding:104px 0;position:relative;}
+#experience,#work{padding:92px 0;}
 .eyebrow{
   display:inline-flex;align-items:center;gap:9px;
   font-size:.74rem;font-weight:600;text-transform:uppercase;letter-spacing:.16em;
@@ -210,6 +211,33 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
 }
 .stackline b{color:var(--body);font-weight:600;}
 
+/* ---------- experience tabs ---------- */
+.exp-shell{display:grid;grid-template-columns:220px 1fr;gap:34px;align-items:start;margin-top:30px;}
+.exp-tabs{display:flex;flex-direction:column;gap:8px;position:sticky;top:96px;}
+.exp-tab{
+  width:100%;text-align:left;background:transparent;border:1px solid transparent;border-left:2px solid transparent;
+  border-radius:10px;padding:13px 14px;font:inherit;color:var(--muted);cursor:pointer;
+  transition:background .18s ease,border-color .18s ease,color .18s ease,box-shadow .18s ease;
+}
+.exp-tab:hover{background:#fff;border-color:var(--line);color:var(--body);}
+.exp-tab.active{background:#fff;border-color:var(--line);border-left-color:var(--accent);color:var(--ink);box-shadow:var(--shadow);}
+.exp-tab b{display:block;font-size:.92rem;line-height:1.35;}
+.exp-tab span{display:block;margin-top:3px;font-size:.76rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);}
+.exp-panel{display:none;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:30px 32px;box-shadow:var(--shadow);}
+.exp-panel.active{display:block;}
+.exp-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;margin-bottom:16px;}
+.exp-head h3{font-size:1.35rem;}
+.exp-head h3 span{color:var(--accent);}
+.exp-date-pill{flex:none;font-size:.8rem;color:var(--muted);background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:5px 11px;margin-top:2px;}
+.exp-summary{font-size:.98rem;color:var(--body);max-width:68ch;margin-bottom:18px;}
+.exp-metrics{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px;}
+.exp-metric{font-size:.8rem;font-weight:600;color:var(--accent);background:rgba(14,127,150,.08);border:1px solid rgba(14,127,150,.14);border-radius:999px;padding:6px 11px;}
+.exp-panel ul{margin:0;padding-left:18px;}
+.exp-panel li{margin-bottom:11px;font-size:.965rem;}
+.exp-panel li:last-child{margin-bottom:0;}
+.exp-panel li::marker{color:var(--accent);}
+.exp-link{display:inline-flex;align-items:center;margin-top:20px;font-size:.9rem;font-weight:600;color:var(--accent);}
+
 /* ---------- filters ---------- */
 .filters{display:flex;flex-wrap:wrap;gap:8px;margin:34px 0 26px;}
 .chipbtn{
@@ -298,6 +326,11 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
 /* ---------- responsive ---------- */
 @media (max-width:900px){
   .about-grid{grid-template-columns:1fr;gap:32px;}
+  .exp-shell{grid-template-columns:1fr;gap:22px;}
+  .exp-tabs{position:static;flex-direction:row;overflow-x:auto;padding-bottom:4px;}
+  .exp-tab{min-width:190px;}
+  .exp-head{display:block;}
+  .exp-date-pill{display:inline-flex;margin:10px 0 0;}
   .case-snapshot{grid-template-columns:1fr;}
   .stats-grid{grid-template-columns:repeat(2,1fr);}
   .stat:nth-child(2){border-right:none;}
@@ -409,98 +442,84 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
 <!-- ================= EXPERIENCE ================= -->
 <section id="experience" style="background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
   <div class="wrap">
-    <div class="rv" style="margin-bottom:38px;">
+    <div class="rv">
       <div class="eyebrow">Experience</div>
-      <h2 class="s-title">Where I've worked</h2>
-      <p class="s-sub">Click any role to expand the detail.</p>
+      <h2 class="s-title">Experience behind the work</h2>
     </div>
 
-    <div class="acc rv">
-      <button class="acc-head" aria-expanded="false">
-        <div class="acc-main">
-          <div class="acc-top">
-            <span class="acc-title">Senior Product &amp; Business Analyst</span>
-            <span class="acc-co">AiDash</span>
-            <span class="acc-date">Apr 2024 – Present</span>
-          </div>
-          <p class="acc-sum">Product owner across discovery, roadmap, PRDs, and success metrics for AI geospatial modules serving 20 utility enterprises (~$10M ARR). Split one problem into two products for two buyer segments, and converted 4 of 5 enterprise pilots to production.</p>
-        </div>
-        <span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
-      </button>
-      <div class="acc-body"><div class="acc-inner">
-        <ul>
-          <li>Own roadmap, PRDs, and success metrics for AI-powered geospatial modules serving 20 utility enterprises (~$10M ARR) — converted <b>4 of 5 enterprise pilots</b> to production deployments and shipped 10+ features adopted across 50 client projects.</li>
-          <li>Shipped the vegetation risk-and-prioritization capability end to end — scored area-level risk, then ranked circuits by ROI so utilities could direct fixed trim budgets to highest-return segments first; cut vegetation-management cost <b>12%</b> and reduced outage frequency (SAIFI) <b>5%</b>.</li>
-          <li>Led enhancement of the Hazard Tree Management module for budget-constrained utilities — clustering-based hotspot analysis surfaced individual high-risk trees, letting clients hit reliability targets on minimal spend; cut vegetation-removal cost <b>20%</b>.</li>
-          <li>Standardized delivery workflows and rebuilt the YoY correlation pipeline with automation — network-correlation accuracy <b>+15%</b>, project turnaround <b>−45%</b>.</li>
-          <li>Launched an org-wide LLM self-service analytics platform (RAG + LangGraph) enabling <b>100 non-technical users</b> across CS and ops to query product data without SQL or BI tools.</li>
-        </ul>
-        <div class="stackline"><b>Stack:</b> Python · SQL · Snowflake · LangGraph · RAG · QGIS · Amplitude · Jira</div>
-      </div></div>
-    </div>
+    <div class="exp-shell rv">
+      <div class="exp-tabs" role="tablist" aria-label="Experience roles">
+        <button class="exp-tab active" type="button" role="tab" aria-selected="true" data-exp="aidash"><b>AiDash</b><span>Product &amp; AI SaaS</span></button>
+        <button class="exp-tab" type="button" role="tab" aria-selected="false" data-exp="ipac"><b>I-PAC</b><span>Data analytics</span></button>
+        <button class="exp-tab" type="button" role="tab" aria-selected="false" data-exp="analyttica"><b>Analyttica</b><span>PM internship</span></button>
+        <button class="exp-tab" type="button" role="tab" aria-selected="false" data-exp="verdis"><b>Verdis</b><span>Product internship</span></button>
+      </div>
 
-    <div class="acc rv">
-      <button class="acc-head" aria-expanded="false">
-        <div class="acc-main">
-          <div class="acc-top">
-            <span class="acc-title">Senior Analyst</span>
-            <span class="acc-co">Indian Political Action Committee</span>
-            <span class="acc-date">Jun 2023 – Apr 2024</span>
+      <div class="exp-panels">
+        <article class="exp-panel active" data-exp-panel="aidash" role="tabpanel">
+          <div class="exp-head">
+            <h3>Senior Product &amp; Business Analyst <span>@ AiDash</span></h3>
+            <div class="exp-date-pill">Apr 2024 – Present</div>
           </div>
-          <p class="acc-sum">Turned live survey data into campaign strategy across 5 West Bengal elections — 1% MAE on vote-share projection over ~1M data points.</p>
-        </div>
-        <span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
-      </button>
-      <div class="acc-body"><div class="acc-inner">
-        <ul>
-          <li>Analyzed live survey data (R, Excel VBA) to surface voter-behavior trends that directly informed <b>3 key campaign decisions</b>.</li>
-          <li>Built SQL/R/Excel reporting workflows that cut survey report-generation time <b>80%</b>.</li>
-          <li>Modeled 5 West Bengal elections across ~1M data points (Python, Tableau, QGIS), achieving <b>1% MAE</b> in vote-share projection.</li>
-        </ul>
-        <div class="stackline"><b>Stack:</b> R · Python · SQL · Tableau · QGIS · Excel VBA</div>
-      </div></div>
-    </div>
+          <p class="exp-summary">Product owner across discovery, roadmap, PRDs, and success metrics for AI geospatial modules serving 20 utility enterprises (~$10M ARR).</p>
+          <div class="exp-metrics">
+            <span class="exp-metric">4/5 pilots converted</span>
+            <span class="exp-metric">20 utility enterprises</span>
+            <span class="exp-metric">100 internal users</span>
+            <span class="exp-metric">10+ features shipped</span>
+          </div>
+          <ul>
+            <li>Converted <b>4 of 5 enterprise pilots</b> to production deployments and shipped 10+ features adopted across 50 client projects.</li>
+            <li>Shipped vegetation risk-and-prioritization workflows that helped utilities direct fixed trim budgets to highest-return segments first; cut vegetation-management cost <b>12%</b> and reduced SAIFI <b>5%</b>.</li>
+            <li>Enhanced Hazard Tree Management for budget-constrained utilities, surfacing individual high-risk trees through hotspot analysis and cutting vegetation-removal cost <b>20%</b>.</li>
+            <li>Launched an org-wide LLM self-service analytics platform enabling <b>100 non-technical users</b> across CS and ops to query product data without SQL or BI tools.</li>
+          </ul>
+          <a class="exp-link" href="#work">View related case study ↓</a>
+          <div class="stackline"><b>Stack:</b> Python · SQL · Snowflake · LangGraph · RAG · QGIS · Amplitude · Jira</div>
+        </article>
 
-    <div class="acc rv">
-      <button class="acc-head" aria-expanded="false">
-        <div class="acc-main">
-          <div class="acc-top">
-            <span class="acc-title">Product Management Intern</span>
-            <span class="acc-co">Analyttica Datalab</span>
-            <span class="acc-date">Aug 2022 – Oct 2022</span>
+        <article class="exp-panel" data-exp-panel="ipac" role="tabpanel">
+          <div class="exp-head">
+            <h3>Senior Analyst <span>@ Indian Political Action Committee</span></h3>
+            <div class="exp-date-pill">Jun 2023 – Apr 2024</div>
           </div>
-          <p class="acc-sum">Ran experiments on customer EMI preferences and instrumented the conversion funnel across three analytics tools.</p>
-        </div>
-        <span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
-      </button>
-      <div class="acc-body"><div class="acc-inner">
-        <ul>
-          <li>Ran an A/B test on EMI-tenure defaults to understand repayment preference across cohorts and ticket sizes; found users strongly anchored to the pre-selected tenure, with <b>3-6 month</b> plans converting best for mid-ticket purchases and <b>12+ month</b> plans preferred for high-ticket purchases, informing default-plan and checkout design.</li>
-          <li>Instrumented funnel tracking across Mixpanel, Google Analytics, and CleverTap and built user personas and journey maps that shaped feature prioritization.</li>
-        </ul>
-        <div class="stackline"><b>Stack:</b> Mixpanel · Google Analytics · CleverTap · SQL</div>
-      </div></div>
-    </div>
+          <p class="exp-summary">Turned live survey data into campaign strategy across 5 West Bengal elections, blending analytics with high-pressure decision support.</p>
+          <ul>
+            <li>Analyzed live survey data to surface voter-behavior trends that directly informed <b>3 key campaign decisions</b>.</li>
+            <li>Built SQL/R/Excel reporting workflows that cut survey report-generation time <b>80%</b>.</li>
+            <li>Modeled 5 elections across ~1M data points, achieving <b>1% MAE</b> in vote-share projection.</li>
+          </ul>
+          <div class="stackline"><b>Stack:</b> R · Python · SQL · Tableau · QGIS · Excel VBA</div>
+        </article>
 
-    <div class="acc rv">
-      <button class="acc-head" aria-expanded="false">
-        <div class="acc-main">
-          <div class="acc-top">
-            <span class="acc-title">Product Intern</span>
-            <span class="acc-co">Verdis</span>
-            <span class="acc-date">May 2022 – Jul 2022</span>
+        <article class="exp-panel" data-exp-panel="analyttica" role="tabpanel">
+          <div class="exp-head">
+            <h3>Product Management Intern <span>@ Analyttica Datalab</span></h3>
+            <div class="exp-date-pill">Aug 2022 – Oct 2022</div>
           </div>
-          <p class="acc-sum">Built a demand-forecasting model enriched with news and social sentiment, reducing forecast MAE to 7%.</p>
-        </div>
-        <span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
-      </button>
-      <div class="acc-body"><div class="acc-inner">
-        <ul>
-          <li>Built a demand-forecasting model (Random Forest, XGBoost, Prophet) enriched with social and news sentiment signals (VADER), reducing forecast MAE to <b>7%</b>.</li>
-          <li>Established baseline supply calculations across SLAs, factoring shelf life, lead time, and wastage to reduce product waste while maintaining service-level commitments.</li>
-        </ul>
-        <div class="stackline"><b>Stack:</b> Python · XGBoost · Prophet · VADER</div>
-      </div></div>
+          <p class="exp-summary">Worked on experimentation, funnel tracking, and user understanding for customer EMI behavior.</p>
+          <ul>
+            <li>Ran an A/B test on EMI-tenure defaults and found users strongly anchored to the pre-selected option.</li>
+            <li>Identified <b>3-6 month</b> plans as the stronger conversion range for mid-ticket purchases and <b>12+ month</b> plans for high-ticket purchases.</li>
+            <li>Instrumented funnel tracking across Mixpanel, Google Analytics, and CleverTap and built personas and journey maps that shaped prioritization.</li>
+          </ul>
+          <div class="stackline"><b>Stack:</b> Mixpanel · Google Analytics · CleverTap · SQL</div>
+        </article>
+
+        <article class="exp-panel" data-exp-panel="verdis" role="tabpanel">
+          <div class="exp-head">
+            <h3>Product Intern <span>@ Verdis</span></h3>
+            <div class="exp-date-pill">May 2022 – Jul 2022</div>
+          </div>
+          <p class="exp-summary">Worked on demand forecasting and supply planning logic for service-level and waste tradeoffs.</p>
+          <ul>
+            <li>Built a demand-forecasting model enriched with social and news sentiment signals, reducing forecast MAE to <b>7%</b>.</li>
+            <li>Established baseline supply calculations across SLAs, factoring shelf life, lead time, and wastage.</li>
+            <li>Helped reduce product waste while maintaining service-level commitments.</li>
+          </ul>
+          <div class="stackline"><b>Stack:</b> Python · XGBoost · Prophet · VADER</div>
+        </article>
+      </div>
     </div>
 
   </div>
@@ -512,7 +531,7 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
     <div class="rv">
       <div class="eyebrow">Work</div>
       <h2 class="s-title">Case studies &amp; projects</h2>
-      <p class="s-sub">Each entry opens into the full write-up — the problem, the constraints, and what I chose not to build.</p>
+      <p class="s-sub">Start with the AiDash case study; the personal projects show how I think through AI product problems end to end.</p>
     </div>
 
     <div class="filters rv">
@@ -592,6 +611,20 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
           <dt>Stack</dt><dd>LangGraph orchestration, OpenStreetMap, OSMnx, Groq, Streamlit</dd>
           <dt>Outcome</dt><dd>Selects <b>5-8 relevant metrics</b> from a catalog of <b>46</b> based on user profile, then generates a personalized locality summary with map, stats, and recommendations in one workflow.</dd>
         </dl></div>
+        <div class="case-snapshot">
+          <div class="snapshot-card">
+            <h5>User problem</h5>
+            <p>People comparing neighborhoods had to stitch together listings, maps, commute data, and vague local opinions.</p>
+          </div>
+          <div class="snapshot-card">
+            <h5>Product decision</h5>
+            <p>Use profile-aware intent extraction to select only the most relevant locality metrics instead of showing every available data point.</p>
+          </div>
+          <div class="snapshot-card">
+            <h5>Product outcome</h5>
+            <p>Generated personalized locality analysis in one workflow, with 5-8 selected metrics from a catalog of 46.</p>
+          </div>
+        </div>
         <h5>The problem</h5>
         <p>Someone evaluating a neighborhood usually has to jump between listing sites, maps, commute estimates, and vague online opinions. The real question is not "how many places are nearby?" but "is this area a fit for my lifestyle?" I wanted to build a decision tool that could answer that for different users, whether they were a student, a family, or a working professional.</p>
         <h5>Constraints</h5>
@@ -626,6 +659,20 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
           <dt>Stack</dt><dd>Hybrid retrieval (dense + BM25), multi-turn Q&amp;A, AWS EC2, Docker</dd>
           <dt>Outcome</dt><dd>Shipped a usable PDF-Q&amp;A app that runs on an AWS EC2 <b>t3.micro</b>, loads a pre-indexed corpus instantly, and lets users extend the knowledge base with new PDFs during a live session.</dd>
         </dl></div>
+        <div class="case-snapshot">
+          <div class="snapshot-card">
+            <h5>User problem</h5>
+            <p>Users needed trustworthy answers from dense PDFs without manually searching, skimming, and stitching pages together.</p>
+          </div>
+          <div class="snapshot-card">
+            <h5>Product decision</h5>
+            <p>Combine dense retrieval with BM25 and visible citations so answers stayed useful for both semantic and exact-match questions.</p>
+          </div>
+          <div class="snapshot-card">
+            <h5>Product outcome</h5>
+            <p>Shipped a low-cost PDF-Q&amp;A app with instant pre-indexed startup, runtime uploads, and page-level source verification.</p>
+          </div>
+        </div>
         <h5>The problem</h5>
         <p>Long technical PDFs are hard to interrogate. A user usually has to search keywords, open multiple pages, and stitch together an answer manually. I wanted a lightweight product that could answer natural-language questions over a document set, preserve conversational flow for follow-ups, and still show the source pages so the user could verify what the model said.</p>
         <h5>Constraints</h5>
@@ -768,6 +815,23 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
   window.addEventListener('resize', function(){
     document.querySelectorAll('.acc.open .acc-body').forEach(function(b){
       b.style.maxHeight = b.scrollHeight + 'px';
+    });
+  });
+
+  /* --- experience tabs --- */
+  var expTabs = document.querySelectorAll('.exp-tab');
+  var expPanels = document.querySelectorAll('.exp-panel');
+  expTabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      var target = tab.dataset.exp;
+      expTabs.forEach(function(t){
+        var active = t === tab;
+        t.classList.toggle('active', active);
+        t.setAttribute('aria-selected', active ? 'true' : 'false');
+      });
+      expPanels.forEach(function(panel){
+        panel.classList.toggle('active', panel.dataset.expPanel === target);
+      });
     });
   });
 
