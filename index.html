@@ -3,17 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
 <title>Nitish Ranjan — Product Manager</title>
-<meta name="description" content="Product Manager. 0→1 and scale, enterprise SaaS, data-heavy products. Roadmaps, PRDs, and success metrics for products serving 20 utility enterprises (~$10M ARR).">
+<meta name="description" content="Product Manager focused on AI products, enterprise SaaS, 0→1 launches, and data-backed product decisions.">
 <!-- Social preview: shows a proper card when the link is pasted in LinkedIn / email / WhatsApp -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Nitish Ranjan — Product Manager">
-<meta property="og:description" content="I own roadmaps, PRDs, and success metrics for products serving 20 utility enterprises (~$10M ARR). 4 of 5 enterprise pilots converted to production.">
+<meta property="og:description" content="AI product, enterprise SaaS, 0→1 launches, and data-backed product decisions.">
 <meta property="og:image" content="nitish.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Nitish Ranjan — Product Manager">
-<meta name="twitter:description" content="0→1 and scale. Enterprise SaaS, data-heavy products.">
+<meta name="twitter:description" content="AI product, enterprise SaaS, 0→1 launches, and data-backed product decisions.">
 <meta name="twitter:image" content="nitish.jpg">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23070a12'/><text y='68' x='50' text-anchor='middle' font-size='56' font-family='Georgia,serif' fill='%2322d3ee'>N</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -159,25 +158,23 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
 .stat-l{font-size:.79rem;color:var(--muted);margin-top:8px;line-height:1.45;}
 
 /* ---------- about ---------- */
-.about-grid{display:grid;grid-template-columns:1.5fr .78fr;gap:40px;align-items:center;margin-top:32px;}
-.about-body{max-width:58ch;}
+.about-grid{display:grid;grid-template-columns:1.32fr .88fr;gap:42px;align-items:start;margin-top:28px;}
+.about-body{max-width:62ch;}
 .about-body p{font-size:1.02rem;line-height:1.74;}
 .about-body p:last-child{margin-bottom:0;}
 .about-body strong{color:var(--ink);font-weight:600;}
-.about-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;}
-.about-tag{font-size:.82rem;font-weight:600;padding:6px 13px;border-radius:999px;background:var(--soft);border:1px solid var(--line);color:var(--muted);}
-.about-side{max-width:360px;margin-left:auto;}
+.about-side{max-width:390px;margin-left:auto;}
 .portrait{
-  width:100%;aspect-ratio:1/.94;object-fit:cover;object-position:center 22%;
+  width:86%;aspect-ratio:1/.92;object-fit:cover;object-position:center 22%;
   border-radius:var(--r);border:1px solid var(--line);
-  box-shadow:var(--shadow);display:block;margin-bottom:12px;background:var(--soft);
+  box-shadow:var(--shadow);display:block;margin:0 auto 12px;background:var(--soft);
 }
-.facts{background:var(--soft);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;}
-.fact{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid var(--line);font-size:.9rem;}
+.facts{background:var(--soft);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;}
+.fact{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px solid var(--line);font-size:.88rem;}
 .fact:last-child{border-bottom:none;padding-bottom:0;}
 .fact:first-child{padding-top:0;}
 .fact dt{color:var(--muted);}
-.fact dd{margin:0;color:var(--ink);font-weight:500;text-align:right;max-width:215px;}
+.fact dd{margin:0;color:var(--ink);font-weight:500;text-align:right;max-width:270px;}
 
 /* ---------- accordion (experience + work) ---------- */
 .acc{border:1px solid var(--line);border-radius:var(--r);background:#fff;margin-bottom:12px;overflow:hidden;transition:box-shadow .22s ease,border-color .22s ease;}
@@ -236,6 +233,10 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
 .tldr dl{margin:0;display:grid;grid-template-columns:112px 1fr;gap:9px 18px;font-size:.92rem;}
 .tldr dt{color:var(--muted);font-weight:600;font-size:.73rem;text-transform:uppercase;letter-spacing:.07em;padding-top:3px;}
 .tldr dd{margin:0;color:var(--ink);}
+.case-snapshot{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:-6px 0 26px;}
+.snapshot-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 18px 16px;box-shadow:0 1px 2px rgba(11,17,32,.03);}
+.snapshot-card h5{margin:0 0 8px!important;color:var(--accent);font-size:.74rem;text-transform:uppercase;letter-spacing:.1em;}
+.snapshot-card p{font-size:.9rem;line-height:1.58;color:var(--body);}
 .cs h5{font-size:.79rem;text-transform:uppercase;letter-spacing:.11em;color:var(--accent);margin:24px 0 8px;font-weight:700;}
 .cs h5:first-child{margin-top:0;}
 .cs p{font-size:.965rem;margin-bottom:0;}
@@ -297,6 +298,7 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
 /* ---------- responsive ---------- */
 @media (max-width:900px){
   .about-grid{grid-template-columns:1fr;gap:32px;}
+  .case-snapshot{grid-template-columns:1fr;}
   .stats-grid{grid-template-columns:repeat(2,1fr);}
   .stat:nth-child(2){border-right:none;}
   .stat:nth-child(1),.stat:nth-child(2){border-bottom:1px solid var(--line);}
@@ -351,11 +353,10 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
       <b>Product Manager</b><span class="sep"></span>0→1 &amp; scale<span class="sep"></span>Enterprise SaaS<span class="sep"></span>IIT Kharagpur
     </div>
     <p class="hero-lede">
-      I own roadmaps, PRDs, and success metrics for enterprise AI products serving
-      <strong>20 utility enterprises (~$10M ARR)</strong>. I've converted
-      <strong>4 of 5 enterprise pilots</strong> into production and launched an internal
-      LLM analytics product now used by <strong>100 non-technical users</strong>. Three years
-      at the intersection of product management and analytics.
+      I build AI products for enterprise teams, owning roadmap, PRDs, and success metrics
+      across geospatial modules used by <strong>20 utility enterprises (~$10M ARR)</strong>.
+      My work has converted <strong>4 of 5 pilots</strong> into production and launched
+      self-service analytics for <strong>100 non-technical users</strong>.
     </p>
     <div class="hero-cta">
       <a href="#work" class="btn btn-light">View selected work</a>
@@ -375,29 +376,20 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
     <div class="about-grid">
       <div class="about-body rv">
         <p>
-          I'm a product professional with three years of <strong>end-to-end ownership — discovery
-          through delivery and adoption</strong>. At AiDash I own the roadmap, PRDs, and success
-          metrics for AI-powered geospatial modules used by North American utilities.
+          I'm a product professional with three years at the intersection of
+          <strong>product management and analytics</strong>. At AiDash I own roadmap, PRDs,
+          and success metrics for AI-powered geospatial modules used by North American utilities.
         </p>
         <p>
-          Most of the job is <strong>prioritization under hard constraints</strong>. Utilities have
-          fixed budgets and different buyer needs, so the product question is less "can we score risk?"
-          and more "what should the customer act on first?" That thinking shaped both the ROI-ranking
-          workflow and the hazard-tree module I shipped.
+          Most of my work is <strong>prioritization under hard constraints</strong>: fixed
+          utility budgets, different buyer needs, and models that must translate into operational
+          decisions. That lens shaped both the ROI-ranking workflow and the hazard-tree module I shipped.
         </p>
         <p>
-          I stay close from customer discovery to UAT and post-launch iteration, and I also launched
-          an internal LLM self-service analytics product used by 100 non-technical users. The kind of
-          PM work I enjoy most is turning complex data into decisions people can actually use.
+          I like PM work where technical depth sharpens judgment: customer discovery, trade-off
+          calls, UAT, launch, and post-launch learning. Recently, I also launched an internal
+          LLM self-service analytics product for 100 non-technical users.
         </p>
-        <div class="about-tags">
-          <span class="about-tag">Roadmap ownership</span>
-          <span class="about-tag">Enterprise SaaS</span>
-          <span class="about-tag">0→1 &amp; scale</span>
-          <span class="about-tag">Geospatial AI</span>
-          <span class="about-tag">Prioritization</span>
-          <span class="about-tag">Data-informed decisions</span>
-        </div>
       </div>
       <div class="rv about-side">
       <img class="portrait" src="nitish.jpg" alt="Nitish Ranjan" loading="lazy">
@@ -406,8 +398,7 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
           <div class="fact"><dt>Currently</dt><dd>Sr. Product &amp; Business Analyst, AiDash</dd></div>
           <div class="fact"><dt>Based in</dt><dd>Gurugram, India</dd></div>
           <div class="fact"><dt>Experience</dt><dd>3+ years</dd></div>
-          <div class="fact"><dt>Focus</dt><dd>0→1 &amp; scale, enterprise SaaS</dd></div>
-          <div class="fact"><dt>Education</dt><dd>Dual degree (B.Tech + M.Tech), IIT Kharagpur</dd></div>
+          <div class="fact"><dt>Education</dt><dd>Mining Engineering, IIT Kharagpur</dd></div>
         </dl>
       </div>
       </div>
@@ -531,8 +522,8 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
     </div>
 
     <!-- CASE 1 -->
-    <div class="acc rv" data-type="case">
-      <button class="acc-head" aria-expanded="false">
+    <div class="acc rv open" data-type="case">
+      <button class="acc-head" aria-expanded="true">
         <div class="acc-main">
           <div class="kicker">0 → 1 · Internal product</div>
           <div class="acc-top"><span class="acc-title">LLM self-service analytics platform</span></div>
@@ -551,16 +542,30 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
           <dt>Team</dt><dd>Small internal cross-functional team; I owned product with engineering and analytics support</dd>
           <dt>Outcome</dt><dd>100 non-technical users onboarded; internal teams could ask data questions in natural language and get analytics plus visualizations directly from existing tables.</dd>
         </dl></div>
+        <div class="case-snapshot">
+          <div class="snapshot-card">
+            <h5>User problem</h5>
+            <p>PMs and CSMs needed distributions, trends, and customer-ready views without writing SQL or waiting in the analyst queue.</p>
+          </div>
+          <div class="snapshot-card">
+            <h5>Product decision</h5>
+            <p>Ship an internal natural-language analytics workflow over approved tables before attempting a client-facing SaaS rollout.</p>
+          </div>
+          <div class="snapshot-card">
+            <h5>Business outcome</h5>
+            <p>100 non-technical users adopted v1, moving lightweight analytics from request queues to faster self-service exploration.</p>
+          </div>
+        </div>
         <h5>The problem</h5>
-        <p>We already had standard analytics tables, but non-technical teams still could not use them directly. If a project manager or customer success manager wanted to understand a distribution, inspect a trend, or prepare a quick data-backed view for a customer conversation, they either had to write queries they were not comfortable with or wait for a business analyst to pull and present the analysis. The problem was not lack of data; it was the gap between available data and usable decision support.</p>
+        <p>We already had standard analytics tables, but non-technical teams could not use them directly. PMs and CSMs still waited on business analysts for distributions, trends, and customer-ready views. The problem was not lack of data; it was the gap between available data and usable decision support.</p>
         <h5>Constraints</h5>
-        <p>The tool had to sit on top of existing analytics tables, answer a wide range of ad-hoc questions, and produce outputs people could actually use in internal reviews and customer-facing conversations. Accuracy and interpretability mattered more than novelty, because a wrong chart is worse than no chart. We also needed to ship quickly as an internal product first, while leaving room to harden the experience later for a potential client-facing rollout inside the SaaS platform.</p>
+        <p>The tool had to sit on existing analytics tables, answer ad-hoc questions, and produce outputs usable in internal reviews and customer conversations. Accuracy and interpretability mattered more than novelty, because a wrong chart is worse than no chart. We also had to ship internally first while keeping a path open for a future client-facing rollout.</p>
         <h5>What I considered — and what I killed</h5>
-        <p>Static dashboards were useful for recurring metrics, but they broke down when users wanted exploratory cuts, distributions, or one-off views for a specific customer conversation. SQL training would reduce analyst dependence for only a small subset of users and still would not help them present the answer well. Keeping the BA team as the default path did not scale for lightweight questions. I chose a self-service analytics workflow because it let users ask in natural language, grounded requests on known tables and definitions, and return both analysis and visual output in one experience. The RAG + LangGraph approach gave us enough structure to orchestrate that flow more safely than a bare prompt interface.</p>
+        <p>Static dashboards worked for recurring metrics but failed on exploratory cuts and one-off customer questions. SQL training helped only a small subset of users, and keeping the BA queue as the default path did not scale. I chose a self-service workflow because users could ask in natural language, stay grounded in known tables and definitions, and get analysis plus visualization in one experience.</p>
         <h5>What shipped in v1 — and what I left out</h5>
-        <p>V1 focused on the core internal workflow: natural-language querying over standard analytics tables, direct chart and distribution generation, and outputs that PMs and CSMs could use without SQL or BI tooling. I intentionally kept the first release internal rather than trying to launch it inside the customer-facing product immediately. That let us validate usefulness, identify common question patterns, and avoid taking on client-grade concerns like tenant isolation, permissions, and broader workflow integration too early.</p>
+        <p>V1 focused on natural-language querying over standard analytics tables, chart and distribution generation, and outputs PMs and CSMs could use without SQL or BI tooling. I kept the first release internal to validate usefulness and question patterns before taking on client-grade concerns like tenant isolation, permissions, and deeper SaaS integration.</p>
         <h5>Results</h5>
-        <p>100 non-technical users across customer success and operations now query product data without SQL or BI tools. The biggest shift was behavioral: analytics moved from a queue-based service model to a conversational workflow where teams could inspect distributions, generate visuals, and get to a usable answer faster on their own. Post-v1, the next step under consideration is extending the same self-service capability into the SaaS product for clients.</p>
+        <p>100 non-technical users across customer success and operations now query product data without SQL or BI tools. Analytics moved from a queue-based service model to a conversational workflow where teams can inspect distributions, generate visuals, and get to a usable answer faster on their own. Post-v1, the next step under consideration is extending this into the SaaS product for clients.</p>
         <h5>What I'd do differently</h5>
         <p>If I were taking it to the next stage, I would formalize evaluation and trust guardrails earlier, especially for chart correctness, business-definition consistency, and permission boundaries. Those become much more important once the product moves from an internal enablement tool to something exposed inside a client-facing SaaS workflow.</p>
       </div></div>
@@ -650,7 +655,8 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
         <div class="pills">
           <span class="pill">Product strategy</span><span class="pill">Roadmap prioritization</span>
           <span class="pill">Product discovery</span><span class="pill">PRD writing</span>
-          <span class="pill">User research</span><span class="pill">Stakeholder management</span>
+          <span class="pill">User research</span><span class="pill">Customer UAT</span>
+          <span class="pill">Stakeholder management</span><span class="pill">Adoption metrics</span>
           <span class="pill">KPI &amp; metric definition</span><span class="pill">Personas &amp; journey mapping</span>
         </div>
       </div>
@@ -678,14 +684,14 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
         </div>
       </div>
       <div class="skill-card rv">
-        <h4>Data &amp; engineering</h4>
+        <h4>Data fluency</h4>
         <div class="pills">
           <span class="pill">SQL</span><span class="pill">Snowflake</span><span class="pill">Python (pandas, NumPy)</span>
           <span class="pill">R</span><span class="pill">Tableau</span><span class="pill">QGIS</span><span class="pill">Advanced Excel</span>
         </div>
       </div>
       <div class="skill-card rv">
-        <h4>Delivery</h4>
+        <h4>Technical delivery</h4>
         <div class="pills">
           <span class="pill">AWS</span><span class="pill">Docker</span><span class="pill">FastAPI</span>
           <span class="pill">Jira</span><span class="pill">Git</span>
@@ -705,7 +711,7 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
     <div class="edu rv">
       <div class="edu-mark">IIT<br>KGP</div>
       <div class="edu-main">
-        <h4>B.Tech, Mining Engineering</h4>
+        <h4>Mining Engineering</h4>
         <div class="edu-meta">Indian Institute of Technology, Kharagpur · West Bengal, India</div>
       </div>
       <div class="edu-score">
@@ -755,6 +761,9 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
         body.style.maxHeight = body.scrollHeight + 'px';
       }
     });
+  });
+  document.querySelectorAll('.acc.open .acc-body').forEach(function(body){
+    body.style.maxHeight = body.scrollHeight + 'px';
   });
   window.addEventListener('resize', function(){
     document.querySelectorAll('.acc.open .acc-body').forEach(function(b){
