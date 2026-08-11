@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Nitish Ranjan — Product Manager</title>
+<meta name="description" content="Product Manager. 0→1 and scale, enterprise SaaS, data-heavy products. Roadmaps, PRDs, and success metrics for products serving 20 utility enterprises (~$10M ARR).">
+<!-- Social preview: shows a proper card when the link is pasted in LinkedIn / email / WhatsApp -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nitish Ranjan — Product Manager">
+<meta property="og:description" content="I own roadmaps, PRDs, and success metrics for products serving 20 utility enterprises (~$10M ARR). 4 of 5 enterprise pilots converted to production.">
+<meta property="og:image" content="nitish.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Nitish Ranjan — Product Manager">
+<meta name="twitter:description" content="0→1 and scale. Enterprise SaaS, data-heavy products.">
+<meta name="twitter:image" content="nitish.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23070a12'/><text y='68' x='50' text-anchor='middle' font-size='56' font-family='Georgia,serif' fill='%2322d3ee'>N</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0b1120;
+  --body:#3f4a5a;
+  --muted:#78859a;
+  --line:#e6eaf0;
+  --soft:#f6f8fb;
+  --bg:#ffffff;
+  --accent:#0e7f96;
+  --accent-2:#22d3ee;
+  --dark:#070a12;
+  --max:1080px;
+  --narrow:760px;
+  --r:14px;
+  --shadow:0 1px 2px rgba(11,17,32,.04), 0 8px 30px rgba(11,17,32,.06);
+  --shadow-lg:0 2px 4px rgba(11,17,32,.04), 0 20px 60px rgba(11,17,32,.10);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:80px;}
+body{
+  margin:0;background:var(--bg);color:var(--body);
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  font-size:16.5px;line-height:1.68;-webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px;}
+.narrow{max-width:var(--narrow);}
+a{color:var(--accent);text-decoration:none;}
+h1,h2,h3,h4{color:var(--ink);margin:0;line-height:1.2;letter-spacing:-.02em;}
+p{margin:0 0 1.05rem;}
+.serif{font-family:"Instrument Serif",Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.01em;}
+.mono{font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;}
+
+/* ---------- section scaffolding ---------- */
+section{padding:104px 0;position:relative;}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:9px;
+  font-size:.74rem;font-weight:600;text-transform:uppercase;letter-spacing:.16em;
+  color:var(--accent);margin-bottom:20px;
+}
+.eyebrow::before{content:"";width:22px;height:1px;background:var(--accent);opacity:.5;}
+.s-title{font-size:clamp(1.85rem,3.6vw,2.6rem);margin-bottom:14px;}
+.s-sub{color:var(--muted);max-width:58ch;font-size:1.03rem;margin-bottom:0;}
+
+/* ---------- nav ---------- */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);
+  background:rgba(255,255,255,.72);border-bottom:1px solid transparent;
+  transition:background .3s ease,border-color .3s ease,box-shadow .3s ease;
+}
+nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32,.05);}
+.nav-in{max-width:var(--max);margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px;}
+.brand{font-size:1.06rem;color:var(--ink);font-weight:600;letter-spacing:-.02em;white-space:nowrap;}
+.brand span{color:var(--accent);}
+.nav-links{display:flex;gap:4px;align-items:center;}
+.nav-links a{
+  font-size:.875rem;color:var(--muted);padding:7px 12px;border-radius:8px;
+  font-weight:500;transition:color .18s ease,background .18s ease;
+}
+.nav-links a:hover{color:var(--ink);background:var(--soft);}
+.nav-links a.active{color:var(--accent);background:rgba(14,127,150,.07);}
+.nav-cta{
+  background:var(--ink);color:#fff!important;padding:9px 16px!important;border-radius:9px;
+  font-weight:500;font-size:.875rem;
+}
+.nav-cta:hover{background:var(--accent);}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:9px;padding:8px 10px;cursor:pointer;}
+.burger span{display:block;width:17px;height:1.6px;background:var(--ink);margin:3.5px 0;border-radius:2px;transition:.25s;}
+
+/* ---------- hero ---------- */
+.hero{
+  background:var(--dark);color:#c9d3e0;padding:172px 0 96px;overflow:hidden;
+  position:relative;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(760px 420px at 12% 0%,rgba(34,211,238,.16),transparent 62%),
+    radial-gradient(680px 380px at 88% 22%,rgba(99,102,241,.15),transparent 62%),
+    radial-gradient(500px 300px at 55% 100%,rgba(20,184,166,.10),transparent 62%);
+  pointer-events:none;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;opacity:.32;pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:58px 58px;
+  mask-image:radial-gradient(circle at 50% 30%,#000 0%,transparent 78%);
+  -webkit-mask-image:radial-gradient(circle at 50% 30%,#000 0%,transparent 78%);
+}
+.hero .wrap{position:relative;z-index:2;}
+.badge{
+  display:inline-flex;align-items:center;gap:9px;
+  border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.05);
+  color:#a9b8cc;padding:6px 14px;border-radius:999px;font-size:.79rem;font-weight:500;
+  margin-bottom:30px;letter-spacing:.01em;
+}
+.dot{width:6px;height:6px;border-radius:50%;background:#34d399;box-shadow:0 0 0 3px rgba(52,211,153,.18);}
+.hero h1{
+  color:#fff;font-size:clamp(3rem,8vw,5.6rem);line-height:1.02;margin-bottom:18px;
+}
+.hero h1 em{font-style:italic;color:var(--accent-2);}
+.hero-role{
+  font-size:clamp(1.02rem,2vw,1.24rem);color:#9fb0c6;font-weight:500;margin-bottom:26px;
+  display:flex;flex-wrap:wrap;align-items:center;gap:10px;
+}
+.hero-role b{color:#e8eef6;font-weight:600;}
+.sep{width:4px;height:4px;border-radius:50%;background:#4b5b72;}
+.hero-lede{font-size:1.09rem;color:#9aa9be;max-width:60ch;line-height:1.72;}
+.hero-lede strong{color:#f0f5fa;font-weight:600;}
+.hero-cta{display:flex;flex-wrap:wrap;gap:11px;margin-top:36px;}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:11px;
+  font-size:.93rem;font-weight:500;border:1px solid var(--line);color:var(--ink);background:#fff;
+  transition:transform .16s ease,box-shadow .16s ease,background .16s ease,border-color .16s ease;
+  cursor:pointer;
+}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--shadow);}
+.btn-light{background:#fff;color:var(--dark);border-color:#fff;}
+.btn-ghost{background:rgba(255,255,255,.04);color:#d5dfec;border-color:rgba(255,255,255,.16);}
+.btn-ghost:hover{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.3);}
+.btn-dark{background:var(--ink);color:#fff;border-color:var(--ink);}
+.btn-dark:hover{background:var(--accent);border-color:var(--accent);}
+
+/* ---------- stat strip ---------- */
+.stats{
+  position:relative;z-index:3;margin-top:-52px;
+}
+.stats-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  background:#fff;border:1px solid var(--line);border-radius:var(--r);
+  box-shadow:var(--shadow-lg);overflow:hidden;
+}
+.stat{padding:26px 24px;border-right:1px solid var(--line);}
+.stat:last-child{border-right:none;}
+.stat-n{font-size:1.9rem;color:var(--ink);font-weight:600;letter-spacing:-.035em;line-height:1;}
+.stat-l{font-size:.79rem;color:var(--muted);margin-top:8px;line-height:1.45;}
+
+/* ---------- about ---------- */
+.about-grid{display:grid;grid-template-columns:1.35fr .95fr;gap:60px;align-items:start;margin-top:38px;}
+.about-body p{font-size:1.05rem;}
+.about-body p:last-child{margin-bottom:0;}
+.about-body strong{color:var(--ink);font-weight:600;}
+.portrait{
+  width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center 22%;
+  border-radius:var(--r);border:1px solid var(--line);
+  box-shadow:var(--shadow);display:block;margin-bottom:18px;background:var(--soft);
+}
+.facts{background:var(--soft);border:1px solid var(--line);border-radius:var(--r);padding:26px;}
+.fact{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);font-size:.92rem;}
+.fact:last-child{border-bottom:none;padding-bottom:0;}
+.fact:first-child{padding-top:0;}
+.fact dt{color:var(--muted);}
+.fact dd{margin:0;color:var(--ink);font-weight:500;text-align:right;}
+
+/* ---------- accordion (experience + work) ---------- */
+.acc{border:1px solid var(--line);border-radius:var(--r);background:#fff;margin-bottom:12px;overflow:hidden;transition:box-shadow .22s ease,border-color .22s ease;}
+.acc:hover{border-color:#d3dae4;}
+.acc.open{box-shadow:var(--shadow-lg);border-color:#cfd8e3;}
+.acc-head{
+  width:100%;text-align:left;background:none;border:none;cursor:pointer;
+  padding:24px 26px;display:flex;gap:20px;align-items:flex-start;font:inherit;color:inherit;
+}
+.acc-main{flex:1;min-width:0;}
+.acc-top{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 12px;margin-bottom:6px;}
+.acc-title{font-size:1.1rem;font-weight:600;color:var(--ink);letter-spacing:-.015em;}
+.acc-co{color:var(--accent);font-weight:500;font-size:1.02rem;}
+.acc-date{font-size:.83rem;color:var(--muted);white-space:nowrap;}
+.acc-sum{font-size:.955rem;color:var(--body);margin:0;}
+.chev{
+  flex:none;width:30px;height:30px;border-radius:50%;background:var(--soft);
+  border:1px solid var(--line);display:grid;place-items:center;
+  transition:transform .28s cubic-bezier(.4,0,.2,1),background .2s;margin-top:2px;
+}
+.acc.open .chev{transform:rotate(180deg);background:var(--accent);border-color:var(--accent);}
+.chev svg{width:13px;height:13px;stroke:var(--muted);}
+.acc.open .chev svg{stroke:#fff;}
+.acc-body{max-height:0;overflow:hidden;transition:max-height .38s cubic-bezier(.4,0,.2,1);}
+.acc-inner{padding:0 26px 26px;}
+.acc-inner ul{margin:0;padding-left:18px;}
+.acc-inner li{margin-bottom:11px;font-size:.965rem;}
+.acc-inner li:last-child{margin-bottom:0;}
+.acc-inner li::marker{color:var(--accent);}
+.stackline{
+  margin-top:18px;padding-top:16px;border-top:1px solid var(--line);
+  font-size:.83rem;color:var(--muted);
+}
+.stackline b{color:var(--body);font-weight:600;}
+
+/* ---------- filters ---------- */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:34px 0 26px;}
+.chipbtn{
+  border:1px solid var(--line);background:#fff;color:var(--muted);
+  padding:8px 16px;border-radius:999px;font:inherit;font-size:.865rem;font-weight:500;
+  cursor:pointer;transition:.18s ease;
+}
+.chipbtn:hover{color:var(--ink);border-color:#cfd8e3;}
+.chipbtn.on{background:var(--ink);color:#fff;border-color:var(--ink);}
+
+/* ---------- work cards ---------- */
+.kicker{
+  display:inline-flex;align-items:center;gap:7px;font-size:.72rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.11em;color:var(--accent);
+  background:rgba(14,127,150,.08);padding:4px 10px;border-radius:6px;margin-bottom:12px;
+}
+.kicker.gold{color:#a16207;background:rgba(202,138,4,.10);}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px;}
+.tag{font-size:.775rem;background:var(--soft);border:1px solid var(--line);color:var(--muted);padding:4px 11px;border-radius:999px;}
+.tldr{background:var(--soft);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;padding:20px 22px;margin-bottom:24px;}
+.tldr dl{margin:0;display:grid;grid-template-columns:112px 1fr;gap:9px 18px;font-size:.92rem;}
+.tldr dt{color:var(--muted);font-weight:600;font-size:.73rem;text-transform:uppercase;letter-spacing:.07em;padding-top:3px;}
+.tldr dd{margin:0;color:var(--ink);}
+.cs h5{font-size:.79rem;text-transform:uppercase;letter-spacing:.11em;color:var(--accent);margin:24px 0 8px;font-weight:700;}
+.cs h5:first-child{margin-top:0;}
+.cs p{font-size:.965rem;margin-bottom:0;}
+.fill{background:#fffbeb;border:1px dashed #f0b429;color:#8a5a00;padding:2px 8px;border-radius:5px;font-size:.9rem;}
+
+/* ---------- skills ---------- */
+.skill-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:38px;}
+.skill-card{border:1px solid var(--line);border-radius:var(--r);padding:24px;background:#fff;transition:.2s;}
+.skill-card:hover{border-color:#cfd8e3;box-shadow:var(--shadow);}
+.skill-card h4{font-size:.79rem;text-transform:uppercase;letter-spacing:.11em;color:var(--accent);margin-bottom:15px;font-weight:700;}
+.pills{display:flex;flex-wrap:wrap;gap:7px;}
+.pill{font-size:.845rem;background:var(--soft);border:1px solid var(--line);color:var(--body);padding:5px 12px;border-radius:8px;}
+
+/* ---------- education ---------- */
+.edu{
+  display:flex;gap:24px;align-items:center;flex-wrap:wrap;
+  border:1px solid var(--line);border-radius:var(--r);padding:28px 30px;margin-top:34px;background:#fff;
+}
+.edu-mark{
+  width:56px;height:56px;border-radius:13px;flex:none;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--ink),#1e2c44);color:#fff;
+  font-weight:600;font-size:.92rem;letter-spacing:.02em;
+}
+.edu-main{flex:1;min-width:220px;}
+.edu-main h4{font-size:1.1rem;margin-bottom:3px;}
+.edu-meta{color:var(--muted);font-size:.92rem;}
+.edu-score{text-align:right;}
+.edu-score .n{font-size:1.35rem;font-weight:600;color:var(--ink);letter-spacing:-.02em;}
+.edu-score .l{font-size:.76rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;}
+
+/* ---------- contact ---------- */
+.contact{background:var(--dark);color:#c9d3e0;position:relative;overflow:hidden;}
+.contact::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(620px 340px at 20% 10%,rgba(34,211,238,.15),transparent 62%),
+    radial-gradient(520px 300px at 82% 88%,rgba(99,102,241,.14),transparent 62%);
+}
+.contact .wrap{position:relative;z-index:2;text-align:center;}
+.contact .eyebrow{color:var(--accent-2);}
+.contact .eyebrow::before{background:var(--accent-2);}
+.contact h2{color:#fff;font-size:clamp(2rem,5vw,3.2rem);margin-bottom:18px;}
+.contact p{color:#93a3ba;max-width:50ch;margin:0 auto 34px;font-size:1.05rem;}
+.contact-row{display:flex;flex-wrap:wrap;gap:11px;justify-content:center;}
+.foot{
+  border-top:1px solid rgba(255,255,255,.08);margin-top:66px;padding-top:26px;
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  font-size:.83rem;color:#5f6f86;
+}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .62s cubic-bezier(.2,.7,.3,1),transform .62s cubic-bezier(.2,.7,.3,1);}
+.rv.in{opacity:1;transform:none;}
+@media (prefers-reduced-motion:reduce){
+  .rv{opacity:1;transform:none;transition:none;}
+  html{scroll-behavior:auto;}
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:900px){
+  .about-grid{grid-template-columns:1fr;gap:32px;}
+  .stats-grid{grid-template-columns:repeat(2,1fr);}
+  .stat:nth-child(2){border-right:none;}
+  .stat:nth-child(1),.stat:nth-child(2){border-bottom:1px solid var(--line);}
+  .skill-grid{grid-template-columns:1fr;}
+}
+@media (max-width:760px){
+  section{padding:76px 0;}
+  .hero{padding:132px 0 84px;}
+  .nav-links{
+    position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);
+    flex-direction:column;align-items:stretch;padding:10px;gap:2px;display:none;
+    box-shadow:0 16px 40px rgba(11,17,32,.10);
+  }
+  .nav-links.open{display:flex;}
+  .nav-links a{padding:11px 14px;}
+  .nav-cta{text-align:center;margin-top:4px;}
+  .burger{display:block;}
+  .acc-head{padding:20px;gap:14px;}
+  .acc-inner{padding:0 20px 22px;}
+  .tldr dl{grid-template-columns:1fr;gap:2px;}
+  .tldr dt{margin-top:10px;}
+  .tldr dd{margin-bottom:2px;}
+  .edu{padding:22px;}
+  .edu-score{text-align:left;}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<nav id="nav">
+  <div class="nav-in">
+    <a href="#top" class="brand">Nitish<span>.</span></a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="navlinks">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#work">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact" class="nav-cta">Get in touch</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="badge"><span class="dot"></span> Building AI products at AiDash · 0-&gt;1 and scale</div>
+    <h1 class="serif">Nitish <em>Ranjan</em></h1>
+    <div class="hero-role">
+      <b>Product Manager</b><span class="sep"></span>0→1 &amp; scale<span class="sep"></span>Enterprise SaaS<span class="sep"></span>IIT Kharagpur
+    </div>
+    <p class="hero-lede">
+      I own roadmaps, PRDs, and success metrics for products serving
+      <strong>20 utility enterprises (~$10M ARR)</strong>. I've converted
+      <strong>4 of 5 enterprise pilots</strong> into production and shipped an org-wide LLM
+      analytics platform now used by <strong>100 non-technical people</strong>. Three years
+      across geospatial AI, campaign analytics, fintech, and supply forecasting.
+    </p>
+    <div class="hero-cta">
+      <a href="#work" class="btn btn-light">View selected work</a>
+      <a href="Nitish_Ranjan_Resume.pdf" target="_blank" class="btn btn-ghost">Résumé (PDF)</a>
+      <a href="mailto:ranjannitish30@gmail.com" class="btn btn-ghost">Email me</a>
+    </div>
+  </div>
+</header>
+
+<!-- ================= STATS ================= -->
+<div class="stats">
+  <div class="wrap">
+    <div class="stats-grid rv">
+      <div class="stat"><div class="stat-n">~$10M</div><div class="stat-l">ARR under product ownership</div></div>
+      <div class="stat"><div class="stat-n">4 / 5</div><div class="stat-l">Enterprise pilots converted to production</div></div>
+      <div class="stat"><div class="stat-n">20</div><div class="stat-l">Utility enterprises served</div></div>
+      <div class="stat"><div class="stat-n">100</div><div class="stat-l">Users on the LLM platform I launched</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">About me</div>
+      <h2 class="s-title">Product decisions, backed by data I can build myself.</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-body rv">
+        <p>
+          I'm a product professional with three years of <strong>end-to-end ownership — discovery
+          through launch and adoption</strong>. At AiDash I own the roadmap, PRDs, and success metrics
+          for AI-powered geospatial modules used by North American utilities: work that runs from
+          discovery calls with grid operators to the reliability numbers on their annual reports.
+        </p>
+        <p>
+          Most of the job is <strong>prioritization under hard constraints</strong>. Utilities have
+          fixed trim budgets and thousands of miles of line, so the product question is never "can we
+          score risk" — it's which segment to fund first, and what to leave unbuilt. Two capabilities
+          I shipped sit at opposite ends of that: an ROI-ranking system for clients with budget to
+          allocate, and a hazard-tree module for clients who have almost none. Same underlying problem,
+          two different products, because they're two different buyers.
+        </p>
+        <p>
+          In practice that means running discovery with customers and internal teams, framing the
+          problem before scoping a solution, writing specs and acceptance criteria engineers don't have
+          to translate, and staying close through sprint delivery and UAT instead of handing off at the
+          spec. After launch I instrument adoption and let the numbers decide what v2 looks like.
+        </p>
+        <p>
+          I also build. I launched our org-wide LLM self-service analytics platform on RAG and
+          LangGraph, and I ship AI side projects to stay close to what these systems can and can't do —
+          which is mostly useful for knowing when an AI feature is a real answer versus an expensive
+          one. Before AiDash I worked on election analytics, consumer fintech experiments, and supply
+          forecasting. Different domains, same job: find the decision the data should be driving, then
+          build the product that makes it.
+        </p>
+      </div>
+      <div class="rv">
+      <img class="portrait" src="nitish.jpg" alt="Nitish Ranjan" loading="lazy">
+      <div class="facts">
+        <dl style="margin:0;">
+          <div class="fact"><dt>Currently</dt><dd>Sr. Product &amp; Business Analyst, AiDash</dd></div>
+          <div class="fact"><dt>Based in</dt><dd>Gurugram, India</dd></div>
+          <div class="fact"><dt>Experience</dt><dd>3+ years</dd></div>
+          <div class="fact"><dt>Focus</dt><dd>0→1 &amp; scale, enterprise SaaS</dd></div>
+          <div class="fact"><dt>Education</dt><dd>B.Tech, IIT Kharagpur</dd></div>
+          <div class="fact"><dt>Domains</dt><dd>Geospatial AI · Utilities · LLM tooling · Fintech · Elections</dd></div>
+        </dl>
+        <div style="margin-top:22px;display:flex;gap:9px;flex-wrap:wrap;">
+          <a href="https://linkedin.com/in/ranjan-nitish" target="_blank" rel="noopener" class="btn" style="padding:9px 15px;font-size:.865rem;">LinkedIn</a>
+          <a href="https://github.com/nitishhranjan" target="_blank" rel="noopener" class="btn" style="padding:9px 15px;font-size:.865rem;">GitHub</a>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience" style="background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="rv" style="margin-bottom:38px;">
+      <div class="eyebrow">Experience</div>
+      <h2 class="s-title">Where I've worked</h2>
+      <p class="s-sub">Click any role to expand the detail.</p>
+    </div>
+
+    <div class="acc rv">
+      <button class="acc-head" aria-expanded="false">
+        <div class="acc-main">
+          <div class="acc-top">
+            <span class="acc-title">Senior Product &amp; Business Analyst</span>
+            <span class="acc-co">AiDash</span>
+            <span class="acc-date">Apr 2024 – Present</span>
+          </div>
+          <p class="acc-sum">Product owner across discovery, roadmap, PRDs, and success metrics for AI geospatial modules serving 20 utility enterprises (~$10M ARR). Split one problem into two products for two buyer segments, and converted 4 of 5 enterprise pilots to production.</p>
+        </div>
+        <span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+      </button>
+      <div class="acc-body"><div class="acc-inner">
+        <ul>
+          <li>Own roadmap, PRDs, and success metrics for AI-powered geospatial modules serving 20 utility enterprises (~$10M ARR) — converted <b>4 of 5 enterprise pilots</b> to production deployments and shipped 10+ features adopted across 50 client projects.</li>
+          <li>Shipped the vegetation risk-and-prioritization capability end to end — scored area-level risk, then ranked circuits by ROI so utilities could direct fixed trim budgets to highest-return segments first; cut vegetation-management cost <b>12%</b> and reduced outage frequency (SAIFI) <b>5%</b>.</li>
+          <li>Led enhancement of the Hazard Tree Management module for budget-constrained utilities — clustering-based hotspot analysis surfaced individual high-risk trees, letting clients hit reliability targets on minimal spend; cut vegetation-removal cost <b>20%</b>.</li>
+          <li>Standardized delivery workflows and rebuilt the YoY correlation pipeline with automation — network-correlation accuracy <b>+15%</b>, project turnaround <b>−45%</b>.</li>
+          <li>Launched an org-wide LLM self-service analytics platform (RAG + LangGraph) enabling <b>100 non-technical users</b> across CS and ops to query product data without SQL or BI tools.</li>
+        </ul>
+        <div class="stackline"><b>Stack:</b> Python · SQL · Snowflake · LangGraph · RAG · QGIS · Amplitude · Jira</div>
+      </div></div>
+    </div>
+
+    <div class="acc rv">
+      <button class="acc-head" aria-expanded="false">
+        <div class="acc-main">
+          <div class="acc-top">
+            <span class="acc-title">Senior Analyst</span>
+            <span class="acc-co">Indian Political Action Committee</span>
+            <span class="acc-date">Jun 2023 – Apr 2024</span>
+          </div>
+          <p class="acc-sum">Turned live survey data into campaign strategy across 5 West Bengal elections — 1% MAE on vote-share projection over ~1M data points.</p>
+        </div>
+        <span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+      </button>
+      <div class="acc-body"><div class="acc-inner">
+        <ul>
+          <li>Analyzed live survey data (R, Excel VBA) to surface voter-behavior trends that directly informed <b>3 key campaign decisions</b>.</li>
+          <li>Built SQL/R/Excel reporting workflows that cut survey report-generation time <b>80%</b>.</li>
+          <li>Modeled 5 West Bengal elections across ~1M data points (Python, Tableau, QGIS), achieving <b>1% MAE</b> in vote-share projection.</li>
+        </ul>
+        <div class="stackline"><b>Stack:</b> R · Python · SQL · Tableau · QGIS · Excel VBA</div>
+      </div></div>
+    </div>
+
+    <div class="acc rv">
+      <button class="acc-head" aria-expanded="false">
+        <div class="acc-main">
+          <div class="acc-top">
+            <span class="acc-title">Product Management Intern</span>
+            <span class="acc-co">Analyttica Datalab</span>
+            <span class="acc-date">Aug 2022 – Oct 2022</span>
+          </div>
+          <p class="acc-sum">Ran experiments on customer EMI preferences and instrumented the conversion funnel across three analytics tools.</p>
+        </div>
+        <span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+      </button>
+      <div class="acc-body"><div class="acc-inner">
+        <ul>
+          <li>Ran an A/B test on EMI-tenure defaults to understand repayment preference across cohorts and ticket sizes; found users strongly anchored to the pre-selected tenure, with <b>3-6 month</b> plans converting best for mid-ticket purchases and <b>12+ month</b> plans preferred for high-ticket purchases, informing default-plan and checkout design.</li>
+          <li>Instrumented funnel tracking across Mixpanel, Google Analytics, and CleverTap and built user personas and journey maps that shaped feature prioritization.</li>
+        </ul>
+        <div class="stackline"><b>Stack:</b> Mixpanel · Google Analytics · CleverTap · SQL</div>
+      </div></div>
+    </div>
+
+    <div class="acc rv">
+      <button class="acc-head" aria-expanded="false">
+        <div class="acc-main">
+          <div class="acc-top">
+            <span class="acc-title">Product Intern</span>
+            <span class="acc-co">Verdis</span>
+            <span class="acc-date">May 2022 – Jul 2022</span>
+          </div>
+          <p class="acc-sum">Built a demand-forecasting model enriched with news and social sentiment, reducing forecast MAE to 7%.</p>
+        </div>
+        <span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+      </button>
+      <div class="acc-body"><div class="acc-inner">
+        <ul>
+          <li>Built a demand-forecasting model (Random Forest, XGBoost, Prophet) enriched with social and news sentiment signals (VADER), reducing forecast MAE to <b>7%</b>.</li>
+          <li>Established baseline supply calculations across SLAs, factoring shelf life, lead time, and wastage to reduce product waste while maintaining service-level commitments.</li>
+        </ul>
+        <div class="stackline"><b>Stack:</b> Python · XGBoost · Prophet · VADER</div>
+      </div></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= WORK ================= -->
+<section id="work">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Work</div>
+      <h2 class="s-title">Case studies &amp; projects</h2>
+      <p class="s-sub">Each entry opens into the full write-up — the problem, the constraints, and what I chose not to build.</p>
+    </div>
+
+    <div class="filters rv">
+      <button class="chipbtn on" data-f="all">All</button>
+      <button class="chipbtn" data-f="case">Case studies</button>
+      <button class="chipbtn" data-f="project">Projects</button>
+    </div>
+
+    <!-- CASE 1 -->
+    <div class="acc rv" data-type="case">
+      <button class="acc-head" aria-expanded="false">
+        <div class="acc-main">
+          <div class="kicker">0 → 1 · Internal product</div>
+          <div class="acc-top"><span class="acc-title">LLM self-service analytics platform</span></div>
+          <p class="acc-sum">Non-technical teams were stuck behind a multi-day analyst queue for every data question. I shipped a RAG + LangGraph platform that answers them directly — <b>100 users across CS and ops</b> adopted it.</p>
+          <div class="tags"><span class="tag">RAG</span><span class="tag">LangGraph</span><span class="tag">0→1</span><span class="tag">Internal tooling</span></div>
+        </div>
+        <span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+      </button>
+      <div class="acc-body"><div class="acc-inner cs">
+        <div class="tldr"><dl>
+          <dt>Role</dt><dd>Product owner, end to end — discovery through launch and adoption</dd>
+          <dt>Context</dt><dd>AI SaaS company serving North American utilities</dd>
+          <dt>Primary user</dt><dd>Project managers, customer success managers, and operations stakeholders who needed analytics and visualizations without writing SQL or waiting on business analysts</dd>
+          <dt>Decision</dt><dd>"Can I answer this data question, explore a distribution, and present it clearly without going through the analyst queue?"</dd>
+          <dt>Timeline</dt><dd>~3 months for v1</dd>
+          <dt>Team</dt><dd>Small internal cross-functional team; I owned product with engineering and analytics support</dd>
+          <dt>Outcome</dt><dd>100 non-technical users onboarded; internal teams could ask data questions in natural language and get analytics plus visualizations directly from existing tables.</dd>
+        </dl></div>
+        <h5>The problem</h5>
+        <p>We already had standard analytics tables, but non-technical teams still could not use them directly. If a project manager or customer success manager wanted to understand a distribution, inspect a trend, or prepare a quick data-backed view for a customer conversation, they either had to write queries they were not comfortable with or wait for a business analyst to pull and present the analysis. The problem was not lack of data; it was the gap between available data and usable decision support.</p>
+        <h5>Constraints</h5>
+        <p>The tool had to sit on top of existing analytics tables, answer a wide range of ad-hoc questions, and produce outputs people could actually use in internal reviews and customer-facing conversations. Accuracy and interpretability mattered more than novelty, because a wrong chart is worse than no chart. We also needed to ship quickly as an internal product first, while leaving room to harden the experience later for a potential client-facing rollout inside the SaaS platform.</p>
+        <h5>What I considered — and what I killed</h5>
+        <p>Static dashboards were useful for recurring metrics, but they broke down when users wanted exploratory cuts, distributions, or one-off views for a specific customer conversation. SQL training would reduce analyst dependence for only a small subset of users and still would not help them present the answer well. Keeping the BA team as the default path did not scale for lightweight questions. I chose a self-service analytics workflow because it let users ask in natural language, grounded requests on known tables and definitions, and return both analysis and visual output in one experience. The RAG + LangGraph approach gave us enough structure to orchestrate that flow more safely than a bare prompt interface.</p>
+        <h5>What shipped in v1 — and what I left out</h5>
+        <p>V1 focused on the core internal workflow: natural-language querying over standard analytics tables, direct chart and distribution generation, and outputs that PMs and CSMs could use without SQL or BI tooling. I intentionally kept the first release internal rather than trying to launch it inside the customer-facing product immediately. That let us validate usefulness, identify common question patterns, and avoid taking on client-grade concerns like tenant isolation, permissions, and broader workflow integration too early.</p>
+        <h5>Results</h5>
+        <p>100 non-technical users across customer success and operations now query product data without SQL or BI tools. The biggest shift was behavioral: analytics moved from a queue-based service model to a conversational workflow where teams could inspect distributions, generate visuals, and get to a usable answer faster on their own. Post-v1, the next step under consideration is extending the same self-service capability into the SaaS product for clients.</p>
+        <h5>What I'd do differently</h5>
+        <p>If I were taking it to the next stage, I would formalize evaluation and trust guardrails earlier, especially for chart correctness, business-definition consistency, and permission boundaries. Those become much more important once the product moves from an internal enablement tool to something exposed inside a client-facing SaaS workflow.</p>
+      </div></div>
+    </div>
+
+    <!-- CASE 2 -->
+    <div class="acc rv" data-type="project">
+      <button class="acc-head" aria-expanded="false">
+        <div class="acc-main">
+          <div class="kicker">0 → 1 · Personal project</div>
+          <div class="acc-top"><span class="acc-title">Locality Lens — AI location intelligence</span></div>
+          <p class="acc-sum">Built a location-intelligence product for people deciding where to live, relocate, or invest — turned raw map data into personalized neighborhood analysis in <b>3-5 seconds</b>, while cutting data-fetch calls by <b>83%</b> through query consolidation.</p>
+          <div class="tags"><span class="tag">LangGraph</span><span class="tag">Geospatial AI</span><span class="tag">Groq + OSM</span></div>
+        </div>
+        <span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+      </button>
+      <div class="acc-body"><div class="acc-inner cs">
+        <div class="tldr"><dl>
+          <dt>Role</dt><dd>Sole builder — scope, design, build, deploy</dd>
+          <dt>Context</dt><dd>Personal project · <a href="https://github.com/nitishhranjan/locality-lens" target="_blank" rel="noopener">Source on GitHub</a></dd>
+          <dt>Primary user</dt><dd>Someone choosing where to live, relocate, or invest — especially a student, family, or working professional comparing neighborhoods</dd>
+          <dt>Decision</dt><dd>"Is this area a fit for my lifestyle, priorities, and daily needs?"</dd>
+          <dt>Timeline</dt><dd>Dec 2025 – Jan 2026</dd>
+          <dt>Stack</dt><dd>LangGraph orchestration, OpenStreetMap, OSMnx, Groq, Streamlit</dd>
+          <dt>Outcome</dt><dd>Selects <b>5-8 relevant metrics</b> from a catalog of <b>46</b> based on user profile, then generates a personalized locality summary with map, stats, and recommendations in one workflow.</dd>
+        </dl></div>
+        <h5>The problem</h5>
+        <p>Someone evaluating a neighborhood usually has to jump between listing sites, maps, commute estimates, and vague online opinions. The real question is not "how many places are nearby?" but "is this area a fit for my lifestyle?" I wanted to build a decision tool that could answer that for different users, whether they were a student, a family, or a working professional.</p>
+        <h5>Constraints</h5>
+        <p>The product had to stay low-cost by relying on open data, work across cities with uneven map quality, and feel fast enough to be interactive. That meant minimizing data-fetch calls, handling invalid inputs and geocoding failures gracefully, and avoiding a wall of generic metrics that would make the output technically rich but practically useless.</p>
+        <h5>What I considered — and what I killed</h5>
+        <p>A rules-only scoring system would have been fast, but too rigid for nuanced user needs. On the other hand, sending all available data to an LLM for an open-ended summary would feel smart but create latency, noise, and higher cost. I used the LLM earlier in the workflow to extract intent and select only the <b>5-8</b> most relevant metrics from a catalog of <b>46</b>, then grounded the final summary in structured statistics. I also replaced many category-specific OSM queries with one consolidated fetch plus in-memory classification, which cut API calls by <b>83%</b> and made the experience faster and cheaper.</p>
+        <h5>What shipped</h5>
+        <p>A Streamlit app where a user enters a locality and optional profile, then gets a personalized summary, quick stats, a detailed metrics view, and an interactive map of nearby POIs. Under the hood, LangGraph orchestrates validation, intent extraction, geocoding, OSM fetch, statistical analysis, and summary generation with conditional routing, caching, and parallel execution.</p>
+        <h5>What I'd do differently</h5>
+        <p>I would add comparison mode and feedback capture next. The current product is strong at answering "what is this area like?" for one place at a time; the next version should help users compare two or three localities side by side and learn from whether the recommendation actually matched their decision.</p>
+      </div></div>
+    </div>
+
+    <!-- CASE 3 -->
+    <div class="acc rv" data-type="project">
+      <button class="acc-head" aria-expanded="false">
+        <div class="acc-main">
+          <div class="kicker">0 → 1 · Personal project</div>
+          <div class="acc-top"><span class="acc-title">RAG document QA system</span></div>
+          <p class="acc-sum">Built a document-QA product for users who need fast answers from dense PDFs without manually skimming pages — chose hybrid retrieval, follow-up-aware chat, and visible citations so answers stayed both useful and verifiable.</p>
+          <div class="tags"><span class="tag">Hybrid retrieval</span><span class="tag">Docker</span><span class="tag">AWS</span></div>
+        </div>
+        <span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+      </button>
+      <div class="acc-body"><div class="acc-inner cs">
+        <div class="tldr"><dl>
+          <dt>Role</dt><dd>Sole builder — scope, design, build, deploy</dd>
+          <dt>Context</dt><dd>Personal project · <a href="https://github.com/nitishhranjan/rag-document-qa-basic" target="_blank" rel="noopener">Source on GitHub</a></dd>
+          <dt>Primary user</dt><dd>Someone trying to extract trustworthy answers from dense PDFs without manually reading, skimming, or running repeated keyword searches</dd>
+          <dt>Decision</dt><dd>"Can I trust this answer quickly enough to act without reading the whole document?"</dd>
+          <dt>Timeline</dt><dd>Nov 2025 – Dec 2025</dd>
+          <dt>Stack</dt><dd>Hybrid retrieval (dense + BM25), multi-turn Q&amp;A, AWS EC2, Docker</dd>
+          <dt>Outcome</dt><dd>Shipped a usable PDF-Q&amp;A app that runs on an AWS EC2 <b>t3.micro</b>, loads a pre-indexed corpus instantly, and lets users extend the knowledge base with new PDFs during a live session.</dd>
+        </dl></div>
+        <h5>The problem</h5>
+        <p>Long technical PDFs are hard to interrogate. A user usually has to search keywords, open multiple pages, and stitch together an answer manually. I wanted a lightweight product that could answer natural-language questions over a document set, preserve conversational flow for follow-ups, and still show the source pages so the user could verify what the model said.</p>
+        <h5>Constraints</h5>
+        <p>The app had to run on low-cost infrastructure, specifically an AWS EC2 <b>t3.micro</b> instance with <b>1 GB RAM</b>, while staying responsive enough for chat. That meant avoiding a heavy deployment footprint, preventing cold-start indexing on deploy, and reducing hallucination risk enough that source citations were a core part of the experience rather than a nice-to-have.</p>
+        <h5>What I considered — and what I killed</h5>
+        <p>A dense-only retriever was simpler but unreliable on exact phrases, acronyms, and terminology-heavy questions that are common in PDFs. A keyword-only approach handled exact matches better but broke on paraphrased queries. I combined vector search with BM25 so the product could handle both semantic and literal lookup, then added question condensation for follow-ups so retrieval stayed strong across multi-turn conversations. I also committed a pre-built vector index instead of reprocessing the corpus on every deploy, because faster startup was more valuable than a perfectly pure indexing flow for this use case.</p>
+        <h5>Results</h5>
+        <p>The result is a working document assistant that is immediately usable after deploy, supports runtime PDF uploads without rebuilding the base corpus, and makes answers easier to trust through page-level citations. The strongest product outcome was usability: it moved the experience from "RAG demo" to "tool someone can actually use to navigate a document set."</p>
+        <h5>What I'd do differently</h5>
+        <p>If I were taking it further, I would add an offline evaluation layer before expanding the feature set: retrieval hit-rate, citation precision, answer faithfulness, and upload latency by document type. The current version proves the workflow and deployment choices; the next step would be making quality measurable.</p>
+      </div></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section id="skills" style="background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Skills &amp; expertise</div>
+      <h2 class="s-title">What I work with</h2>
+    </div>
+    <div class="skill-grid">
+      <div class="skill-card rv">
+        <h4>Product management</h4>
+        <div class="pills">
+          <span class="pill">Product strategy</span><span class="pill">Roadmap prioritization</span>
+          <span class="pill">Product discovery</span><span class="pill">PRD writing</span>
+          <span class="pill">User research</span><span class="pill">Stakeholder management</span>
+          <span class="pill">KPI &amp; metric definition</span><span class="pill">Personas &amp; journey mapping</span>
+        </div>
+      </div>
+      <div class="skill-card rv">
+        <h4>AI / LLM</h4>
+        <div class="pills">
+          <span class="pill">RAG</span><span class="pill">LLM agents</span><span class="pill">LangChain</span>
+          <span class="pill">LangGraph</span><span class="pill">Prompt engineering</span>
+          <span class="pill">Hybrid retrieval (BM25 + vector)</span>
+        </div>
+      </div>
+      <div class="skill-card rv">
+        <h4>Experimentation</h4>
+        <div class="pills">
+          <span class="pill">A/B testing</span><span class="pill">Experiment design</span>
+          <span class="pill">Hypothesis testing</span><span class="pill">Funnel &amp; cohort analysis</span>
+          <span class="pill">Retention analysis</span><span class="pill">Causal inference</span>
+        </div>
+      </div>
+      <div class="skill-card rv">
+        <h4>Product analytics</h4>
+        <div class="pills">
+          <span class="pill">Amplitude</span><span class="pill">Pendo</span><span class="pill">Mixpanel</span>
+          <span class="pill">Google Analytics</span><span class="pill">CleverTap</span>
+        </div>
+      </div>
+      <div class="skill-card rv">
+        <h4>Data &amp; engineering</h4>
+        <div class="pills">
+          <span class="pill">SQL</span><span class="pill">Snowflake</span><span class="pill">Python (pandas, NumPy)</span>
+          <span class="pill">R</span><span class="pill">Tableau</span><span class="pill">QGIS</span><span class="pill">Advanced Excel</span>
+        </div>
+      </div>
+      <div class="skill-card rv">
+        <h4>Delivery</h4>
+        <div class="pills">
+          <span class="pill">AWS</span><span class="pill">Docker</span><span class="pill">FastAPI</span>
+          <span class="pill">Jira</span><span class="pill">Git</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EDUCATION ================= -->
+<section id="education">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Education</div>
+      <h2 class="s-title">Academics</h2>
+    </div>
+    <div class="edu rv">
+      <div class="edu-mark">IIT<br>KGP</div>
+      <div class="edu-main">
+        <h4>B.Tech, Mining Engineering</h4>
+        <div class="edu-meta">Indian Institute of Technology, Kharagpur · West Bengal, India</div>
+      </div>
+      <div class="edu-score">
+        <div class="n">7.51</div>
+        <div class="l">CGPA · 2023</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Get in touch</div>
+      <h2 class="serif">Let's talk product.</h2>
+      <p>Happy to walk through any of the work above, or just compare notes on building with LLMs.</p>
+      <div class="contact-row">
+        <a href="mailto:ranjannitish30@gmail.com" class="btn btn-light">ranjannitish30@gmail.com</a>
+        <a href="https://linkedin.com/in/ranjan-nitish" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
+        <a href="https://github.com/nitishhranjan" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
+        <a href="Nitish_Ranjan_Resume.pdf" target="_blank" class="btn btn-ghost">Résumé (PDF)</a>
+      </div>
+    </div>
+    <div class="foot">
+      <div>© 2026 Nitish Ranjan</div>
+      <div>Gurugram, India · +91 99116 51252</div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  /* --- accordions --- */
+  document.querySelectorAll('.acc-head').forEach(function(head){
+    head.addEventListener('click', function(){
+      var acc  = head.closest('.acc');
+      var body = acc.querySelector('.acc-body');
+      var open = acc.classList.contains('open');
+      if(open){
+        body.style.maxHeight = '0px';
+        acc.classList.remove('open');
+        head.setAttribute('aria-expanded','false');
+      }else{
+        acc.classList.add('open');
+        head.setAttribute('aria-expanded','true');
+        body.style.maxHeight = body.scrollHeight + 'px';
+      }
+    });
+  });
+  window.addEventListener('resize', function(){
+    document.querySelectorAll('.acc.open .acc-body').forEach(function(b){
+      b.style.maxHeight = b.scrollHeight + 'px';
+    });
+  });
+
+  /* --- work filters --- */
+  var btns = document.querySelectorAll('.chipbtn');
+  btns.forEach(function(b){
+    b.addEventListener('click', function(){
+      btns.forEach(function(x){x.classList.remove('on');});
+      b.classList.add('on');
+      var f = b.dataset.f;
+      document.querySelectorAll('#work .acc').forEach(function(card){
+        var show = (f === 'all' || card.dataset.type === f);
+        card.style.display = show ? '' : 'none';
+      });
+    });
+  });
+
+  /* --- nav state --- */
+  var nav = document.getElementById('nav');
+  var links = document.querySelectorAll('.nav-links a[href^="#"]');
+  var secs = [].slice.call(document.querySelectorAll('section[id], header[id]'));
+  function onScroll(){
+    nav.classList.toggle('scrolled', window.scrollY > 12);
+    var pos = window.scrollY + 120, cur = '';
+    secs.forEach(function(s){ if(s.offsetTop <= pos) cur = s.id; });
+    links.forEach(function(l){
+      l.classList.toggle('active', l.getAttribute('href') === '#' + cur && !l.classList.contains('nav-cta'));
+    });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* --- mobile menu --- */
+  var burger = document.getElementById('burger');
+  var navlinks = document.getElementById('navlinks');
+  burger.addEventListener('click', function(){ navlinks.classList.toggle('open'); });
+  navlinks.addEventListener('click', function(e){
+    if(e.target.tagName === 'A') navlinks.classList.remove('open');
+  });
+
+  /* --- reveal on scroll --- */
+  var rv = document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en, i){
+        if(en.isIntersecting){
+          setTimeout(function(){ en.target.classList.add('in'); }, Math.min(i*55, 220));
+          io.unobserve(en.target);
+        }
+      });
+    }, {threshold:0.08, rootMargin:'0px 0px -40px 0px'});
+    rv.forEach(function(el){ io.observe(el); });
+  }else{
+    rv.forEach(function(el){ el.classList.add('in'); });
+  }
+})();
+</script>
+
+</body>
+</html>
