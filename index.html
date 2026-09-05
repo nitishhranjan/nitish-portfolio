@@ -138,6 +138,14 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
 .hero-lede{font-size:1.09rem;color:#9aa9be;max-width:60ch;line-height:1.72;}
 .hero-lede strong{color:#f0f5fa;font-weight:600;}
 .hero-cta{display:flex;flex-wrap:wrap;gap:11px;margin-top:36px;}
+.hero-cta-text{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:20px;font-size:.875rem;}
+.hero-cta-text a{
+  color:#9aa9be;font-weight:500;border-bottom:1px solid transparent;
+  transition:color .18s ease,border-color .18s ease;
+}
+.hero-cta-text a:hover{color:#f0f5fa;border-bottom-color:rgba(255,255,255,.28);}
+.hero-cta-text a:focus-visible{outline:2px solid var(--accent-2);outline-offset:3px;border-radius:3px;}
+.hero-cta-text .mid{color:#4b5b72;}
 .btn{
   display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:11px;
   font-size:.93rem;font-weight:500;border:1px solid var(--line);color:var(--ink);background:#fff;
@@ -412,8 +420,12 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
     </p>
     <div class="hero-cta">
       <a href="#work" class="btn btn-light">View selected work</a>
-      <a href="Nitish_Ranjan_Resume.pdf" target="_blank" rel="noopener" class="btn btn-ghost">Résumé (PDF)</a>
-      <a href="mailto:ranjannitish30@gmail.com" class="btn btn-ghost">Email me</a>
+      <a href="https://locality-lens-ten.vercel.app/" target="_blank" rel="noopener" class="btn btn-ghost">Try Locality Lens ↗</a>
+    </div>
+    <div class="hero-cta-text">
+      <a href="Nitish_Ranjan_Resume.pdf" target="_blank" rel="noopener">Résumé (PDF)</a>
+      <span class="mid" aria-hidden="true">·</span>
+      <a href="mailto:ranjannitish30@gmail.com">Email me</a>
     </div>
   </div>
 </header>
