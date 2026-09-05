@@ -5,19 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nitish Ranjan — Product Manager</title>
 <meta name="description" content="Product Manager focused on AI products, enterprise SaaS, 0→1 launches, and data-backed product decisions.">
+<link rel="canonical" href="https://nitishhranjan.github.io/nitish-portfolio/">
+<meta name="author" content="Nitish Ranjan">
+<meta name="theme-color" content="#070a12">
 <!-- Social preview: shows a proper card when the link is pasted in LinkedIn / email / WhatsApp -->
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://nitishhranjan.github.io/nitish-portfolio/">
+<meta property="og:site_name" content="Nitish Ranjan">
 <meta property="og:title" content="Nitish Ranjan — Product Manager">
 <meta property="og:description" content="AI product, enterprise SaaS, 0→1 launches, and data-backed product decisions.">
-<meta property="og:image" content="nitish.jpg">
+<meta property="og:image" content="https://nitishhranjan.github.io/nitish-portfolio/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Nitish Ranjan — Product Manager. 0→1 and scale, enterprise SaaS, AI products.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Nitish Ranjan — Product Manager">
 <meta name="twitter:description" content="AI product, enterprise SaaS, 0→1 launches, and data-backed product decisions.">
-<meta name="twitter:image" content="nitish.jpg">
+<meta name="twitter:image" content="https://nitishhranjan.github.io/nitish-portfolio/og-card.jpg">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23070a12'/><text y='68' x='50' text-anchor='middle' font-size='56' font-family='Georgia,serif' fill='%2322d3ee'>N</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --ink:#0b1120;
@@ -211,6 +219,21 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
 }
 .stackline b{color:var(--body);font-weight:600;}
 
+/* ---------- always-visible project links (sibling of .acc-head, not nested in the button) ---------- */
+.acc-links{display:flex;flex-wrap:wrap;gap:9px;padding:0 26px 22px;margin-top:-8px;}
+.acc-link{
+  display:inline-flex;align-items:center;gap:7px;font-size:.845rem;font-weight:600;
+  padding:7px 14px;border-radius:9px;border:1px solid var(--line);
+  background:#fff;color:var(--body);
+  transition:transform .16s ease,box-shadow .16s ease,background .16s ease,border-color .16s ease,color .16s ease;
+}
+.acc-link:hover{border-color:#cfd8e3;box-shadow:var(--shadow);transform:translateY(-1px);}
+.acc-link:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.acc-link.live{background:rgba(14,127,150,.07);border-color:rgba(14,127,150,.22);color:var(--accent);}
+.acc-link.live:hover{background:var(--accent);border-color:var(--accent);color:#fff;}
+.acc-link.live:hover .lv{background:#fff;box-shadow:0 0 0 3px rgba(255,255,255,.25);}
+.lv{width:6px;height:6px;border-radius:50%;background:#34d399;box-shadow:0 0 0 3px rgba(52,211,153,.18);flex:none;}
+
 /* ---------- experience tabs ---------- */
 .exp-shell{display:grid;grid-template-columns:220px 1fr;gap:34px;align-items:start;margin-top:30px;}
 .exp-tabs{display:flex;flex-direction:column;gap:8px;position:sticky;top:96px;}
@@ -351,6 +374,7 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
   .burger{display:block;}
   .acc-head{padding:20px;gap:14px;}
   .acc-inner{padding:0 20px 22px;}
+  .acc-links{padding:0 20px 18px;}
   .tldr dl{grid-template-columns:1fr;gap:2px;}
   .tldr dt{margin-top:10px;}
   .tldr dd{margin-bottom:2px;}
@@ -358,6 +382,25 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
   .edu-score{text-align:left;}
 }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Nitish Ranjan",
+  "url": "https://nitishhranjan.github.io/nitish-portfolio/",
+  "image": "https://nitishhranjan.github.io/nitish-portfolio/og-card.jpg",
+  "jobTitle": "Senior Product & Business Analyst",
+  "worksFor": {"@type": "Organization", "name": "AiDash"},
+  "alumniOf": {"@type": "CollegeOrUniversity", "name": "Indian Institute of Technology, Kharagpur"},
+  "address": {"@type": "PostalAddress", "addressLocality": "Gurugram", "addressCountry": "IN"},
+  "email": "mailto:ranjannitish30@gmail.com",
+  "knowsAbout": ["Product Management", "AI Products", "Enterprise SaaS", "RAG", "Product Analytics", "Experimentation"],
+  "sameAs": [
+    "https://linkedin.com/in/ranjan-nitish",
+    "https://github.com/nitishhranjan"
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -425,7 +468,10 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
         </p>
       </div>
       <div class="rv about-side">
-      <img class="portrait" src="nitish.jpg" alt="Nitish Ranjan" loading="lazy">
+      <picture>
+        <source srcset="nitish.webp" type="image/webp">
+        <img class="portrait" src="nitish.jpg" alt="Nitish Ranjan" width="900" height="600" loading="lazy" decoding="async">
+      </picture>
       <div class="facts">
         <dl style="margin:0;">
           <div class="fact"><dt>Currently</dt><dd>Sr. Product &amp; Business Analyst, AiDash</dd></div>
@@ -601,10 +647,14 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
         </div>
         <span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
       </button>
+      <div class="acc-links">
+        <a class="acc-link live" href="https://locality-lens-ten.vercel.app" target="_blank" rel="noopener"><span class="lv"></span>Live demo ↗</a>
+        <a class="acc-link" href="https://github.com/nitishhranjan/locality-lens" target="_blank" rel="noopener">Source ↗</a>
+      </div>
       <div class="acc-body"><div class="acc-inner cs">
         <div class="tldr"><dl>
           <dt>Role</dt><dd>Sole builder — scope, design, build, deploy</dd>
-          <dt>Context</dt><dd>Personal project · <a href="https://github.com/nitishhranjan/locality-lens" target="_blank" rel="noopener">Source on GitHub</a></dd>
+          <dt>Context</dt><dd>Personal project · <a href="https://locality-lens-ten.vercel.app" target="_blank" rel="noopener">Live demo</a> · <a href="https://github.com/nitishhranjan/locality-lens" target="_blank" rel="noopener">Source on GitHub</a></dd>
           <dt>Primary user</dt><dd>Someone choosing where to live, relocate, or invest — especially a student, family, or working professional comparing neighborhoods</dd>
           <dt>Decision</dt><dd>"Is this area a fit for my lifestyle, priorities, and daily needs?"</dd>
           <dt>Timeline</dt><dd>Dec 2025 – Jan 2026</dd>
@@ -649,10 +699,14 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
         </div>
         <span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
       </button>
+      <div class="acc-links">
+        <a class="acc-link live" href="https://rag-document-qa-navy.vercel.app/" target="_blank" rel="noopener"><span class="lv"></span>Live demo ↗</a>
+        <a class="acc-link" href="https://github.com/nitishhranjan/rag-document-qa-basic" target="_blank" rel="noopener">Source ↗</a>
+      </div>
       <div class="acc-body"><div class="acc-inner cs">
         <div class="tldr"><dl>
           <dt>Role</dt><dd>Sole builder — scope, design, build, deploy</dd>
-          <dt>Context</dt><dd>Personal project · <a href="https://github.com/nitishhranjan/rag-document-qa-basic" target="_blank" rel="noopener">Source on GitHub</a></dd>
+          <dt>Context</dt><dd>Personal project · <a href="https://rag-document-qa-navy.vercel.app/" target="_blank" rel="noopener">Live demo</a> · <a href="https://github.com/nitishhranjan/rag-document-qa-basic" target="_blank" rel="noopener">Source on GitHub</a></dd>
           <dt>Primary user</dt><dd>Someone trying to extract trustworthy answers from dense PDFs without manually reading, skimming, or running repeated keyword searches</dd>
           <dt>Decision</dt><dd>"Can I trust this answer quickly enough to act without reading the whole document?"</dd>
           <dt>Timeline</dt><dd>Nov 2025 – Dec 2025</dd>
