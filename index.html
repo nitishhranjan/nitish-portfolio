@@ -149,20 +149,6 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
 .btn-ghost{background:rgba(255,255,255,.04);color:#d5dfec;border-color:rgba(255,255,255,.16);}
 .btn-ghost:hover{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.3);}
 
-/* ---------- stat strip ---------- */
-.stats{
-  position:relative;z-index:3;margin-top:-52px;
-}
-.stats-grid{
-  display:grid;grid-template-columns:repeat(4,1fr);
-  background:#fff;border:1px solid var(--line);border-radius:var(--r);
-  box-shadow:var(--shadow-lg);overflow:hidden;
-}
-.stat{padding:26px 24px;border-right:1px solid var(--line);}
-.stat:last-child{border-right:none;}
-.stat-n{font-size:1.9rem;color:var(--ink);font-weight:600;letter-spacing:-.035em;line-height:1;}
-.stat-l{font-size:.79rem;color:var(--muted);margin-top:8px;line-height:1.45;}
-
 /* ---------- about ---------- */
 .about-grid{display:grid;grid-template-columns:1.32fr .88fr;gap:42px;align-items:start;margin-top:28px;}
 .about-body{max-width:62ch;}
@@ -348,9 +334,6 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
   .exp-head{display:block;}
   .exp-date-pill{display:inline-flex;margin:10px 0 0;}
   .case-snapshot{grid-template-columns:1fr;}
-  .stats-grid{grid-template-columns:repeat(2,1fr);}
-  .stat:nth-child(2){border-right:none;}
-  .stat:nth-child(1),.stat:nth-child(2){border-bottom:1px solid var(--line);}
   .skill-grid{grid-template-columns:1fr;}
 }
 @media (max-width:760px){
@@ -435,30 +418,6 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
   </div>
 </header>
 
-<!-- ================= STAT STRIP ================= -->
-<div class="stats">
-  <div class="wrap">
-    <div class="stats-grid rv">
-      <div class="stat">
-        <div class="stat-n">3+</div>
-        <div class="stat-l">Years across product<br>and analytics</div>
-      </div>
-      <div class="stat">
-        <div class="stat-n">20</div>
-        <div class="stat-l">Utility enterprises served<br>(~$10M ARR)</div>
-      </div>
-      <div class="stat">
-        <div class="stat-n">4/5</div>
-        <div class="stat-l">Enterprise pilots converted<br>to production</div>
-      </div>
-      <div class="stat">
-        <div class="stat-n">100</div>
-        <div class="stat-l">Non-technical users on the<br>LLM analytics platform</div>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- ================= ABOUT ================= -->
 <section id="about">
   <div class="wrap">
@@ -487,7 +446,7 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
       <div class="rv about-side">
       <picture>
         <source srcset="nitish.webp" type="image/webp">
-        <img class="portrait" src="nitish.jpg" alt="Nitish Ranjan" width="900" height="600" loading="lazy" decoding="async">
+        <img class="portrait" src="nitish.jpg" alt="Nitish Ranjan" loading="lazy" decoding="async">
       </picture>
       <div class="facts">
         <dl style="margin:0;">
