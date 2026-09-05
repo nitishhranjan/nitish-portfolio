@@ -138,13 +138,6 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
 .hero-lede{font-size:1.09rem;color:#9aa9be;max-width:60ch;line-height:1.72;}
 .hero-lede strong{color:#f0f5fa;font-weight:600;}
 .hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:11px;margin-top:36px;}
-.hero-cta-link{
-  margin-left:9px;font-size:.875rem;font-weight:500;color:#9aa9be;
-  border-bottom:1px solid transparent;
-  transition:color .18s ease,border-color .18s ease;
-}
-.hero-cta-link:hover{color:#f0f5fa;border-bottom-color:rgba(255,255,255,.28);}
-.hero-cta-link:focus-visible{outline:2px solid var(--accent-2);outline-offset:3px;border-radius:3px;}
 .btn{
   display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:11px;
   font-size:.93rem;font-weight:500;border:1px solid var(--line);color:var(--ink);background:#fff;
@@ -346,6 +339,8 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
 @media (max-width:760px){
   section{padding:76px 0;}
   .hero{padding:132px 0 84px;}
+  .hero-cta{flex-direction:column;align-items:stretch;gap:10px;}
+  .hero-cta .btn{width:100%;justify-content:center;}
   .nav-links{
     position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);
     flex-direction:column;align-items:stretch;padding:10px;gap:2px;display:none;
@@ -420,7 +415,7 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
     <div class="hero-cta">
       <a href="#work" class="btn btn-light">View selected work</a>
       <a href="https://locality-lens-ten.vercel.app/" target="_blank" rel="noopener" class="btn btn-ghost">Try Locality Lens ↗</a>
-      <a href="Nitish_Ranjan_Resume.pdf" target="_blank" rel="noopener" class="hero-cta-link">Résumé (PDF)</a>
+      <a href="Nitish_Ranjan_Resume.pdf" target="_blank" rel="noopener" class="btn btn-light">Résumé (PDF)</a>
     </div>
   </div>
 </header>
