@@ -30,7 +30,7 @@
 :root{
   --ink:#0b1120;
   --body:#3f4a5a;
-  --muted:#78859a;
+  --muted:#606e83;
   --line:#e6eaf0;
   --soft:#f6f8fb;
   --bg:#ffffff;
@@ -57,7 +57,6 @@ a{color:var(--accent);text-decoration:none;}
 h1,h2,h3,h4{color:var(--ink);margin:0;line-height:1.2;letter-spacing:-.02em;}
 p{margin:0 0 1.05rem;}
 .serif{font-family:"Instrument Serif",Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.01em;}
-.mono{font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;}
 
 /* ---------- section scaffolding ---------- */
 section{padding:104px 0;position:relative;}
@@ -149,8 +148,6 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
 .btn-light{background:#fff;color:var(--dark);border-color:#fff;}
 .btn-ghost{background:rgba(255,255,255,.04);color:#d5dfec;border-color:rgba(255,255,255,.16);}
 .btn-ghost:hover{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.3);}
-.btn-dark{background:var(--ink);color:#fff;border-color:var(--ink);}
-.btn-dark:hover{background:var(--accent);border-color:var(--accent);}
 
 /* ---------- stat strip ---------- */
 .stats{
@@ -196,8 +193,6 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
 .acc-main{flex:1;min-width:0;}
 .acc-top{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 12px;margin-bottom:6px;}
 .acc-title{font-size:1.1rem;font-weight:600;color:var(--ink);letter-spacing:-.015em;}
-.acc-co{color:var(--accent);font-weight:500;font-size:1.02rem;}
-.acc-date{font-size:.83rem;color:var(--muted);white-space:nowrap;}
 .acc-sum{font-size:.955rem;color:var(--body);margin:0;}
 .chev{
   flex:none;width:30px;height:30px;border-radius:50%;background:var(--soft);
@@ -277,7 +272,6 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
   text-transform:uppercase;letter-spacing:.11em;color:var(--accent);
   background:rgba(14,127,150,.08);padding:4px 10px;border-radius:6px;margin-bottom:12px;
 }
-.kicker.gold{color:#a16207;background:rgba(202,138,4,.10);}
 .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px;}
 .tag{font-size:.775rem;background:var(--soft);border:1px solid var(--line);color:var(--muted);padding:4px 11px;border-radius:999px;}
 .tldr{background:var(--soft);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;padding:20px 22px;margin-bottom:24px;}
@@ -291,7 +285,6 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
 .cs h5{font-size:.79rem;text-transform:uppercase;letter-spacing:.11em;color:var(--accent);margin:24px 0 8px;font-weight:700;}
 .cs h5:first-child{margin-top:0;}
 .cs p{font-size:.965rem;margin-bottom:0;}
-.fill{background:#fffbeb;border:1px dashed #f0b429;color:#8a5a00;padding:2px 8px;border-radius:5px;font-size:.9rem;}
 
 /* ---------- skills ---------- */
 .skill-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:38px;}
@@ -423,7 +416,7 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
 <!-- ================= HERO ================= -->
 <header class="hero" id="top">
   <div class="wrap">
-    <div class="badge"><span class="dot"></span> Building AI products at AiDash · 0-&gt;1 and scale</div>
+    <div class="badge"><span class="dot"></span> Sr. Product &amp; Business Analyst at AiDash · Building AI products 0→1 and at scale</div>
     <h1 class="serif">Nitish <em>Ranjan</em></h1>
     <div class="hero-role">
       <b>Product Manager</b><span class="sep"></span>0→1 &amp; scale<span class="sep"></span>Enterprise SaaS<span class="sep"></span>IIT Kharagpur
@@ -441,6 +434,30 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
     </div>
   </div>
 </header>
+
+<!-- ================= STAT STRIP ================= -->
+<div class="stats">
+  <div class="wrap">
+    <div class="stats-grid rv">
+      <div class="stat">
+        <div class="stat-n">3+</div>
+        <div class="stat-l">Years across product<br>and analytics</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">20</div>
+        <div class="stat-l">Utility enterprises served<br>(~$10M ARR)</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">4/5</div>
+        <div class="stat-l">Enterprise pilots converted<br>to production</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">100</div>
+        <div class="stat-l">Non-technical users on the<br>LLM analytics platform</div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- ================= ABOUT ================= -->
 <section id="about">
@@ -657,7 +674,7 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
           <dt>Context</dt><dd>Personal project · <a href="https://locality-lens-ten.vercel.app" target="_blank" rel="noopener">Live demo</a> · <a href="https://github.com/nitishhranjan/locality-lens" target="_blank" rel="noopener">Source on GitHub</a></dd>
           <dt>Primary user</dt><dd>Someone choosing where to live, relocate, or invest — especially a student, family, or working professional comparing neighborhoods</dd>
           <dt>Decision</dt><dd>"Is this area a fit for my lifestyle, priorities, and daily needs?"</dd>
-          <dt>Timeline</dt><dd>Dec 2025 – Jan 2026</dd>
+          <dt>Timeline</dt><dd>Dec 2025 – present</dd>
           <dt>Stack</dt><dd>LangGraph orchestration, OpenStreetMap, OSMnx, Groq, Streamlit</dd>
           <dt>Outcome</dt><dd>Selects <b>5-8 relevant metrics</b> from a catalog of <b>46</b> based on user profile, then generates a personalized locality summary with map, stats, and recommendations in one workflow.</dd>
         </dl></div>
@@ -709,7 +726,7 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
           <dt>Context</dt><dd>Personal project · <a href="https://rag-document-qa-navy.vercel.app/" target="_blank" rel="noopener">Live demo</a> · <a href="https://github.com/nitishhranjan/rag-document-qa-basic" target="_blank" rel="noopener">Source on GitHub</a></dd>
           <dt>Primary user</dt><dd>Someone trying to extract trustworthy answers from dense PDFs without manually reading, skimming, or running repeated keyword searches</dd>
           <dt>Decision</dt><dd>"Can I trust this answer quickly enough to act without reading the whole document?"</dd>
-          <dt>Timeline</dt><dd>Nov 2025 – Dec 2025</dd>
+          <dt>Timeline</dt><dd>Nov 2025 – Jun 2026</dd>
           <dt>Stack</dt><dd>Hybrid retrieval (dense + BM25), multi-turn Q&amp;A, AWS EC2, Docker</dd>
           <dt>Outcome</dt><dd>Shipped a usable PDF-Q&amp;A app that runs on an AWS EC2 <b>t3.micro</b>, loads a pre-indexed corpus instantly, and lets users extend the knowledge base with new PDFs during a live session.</dd>
         </dl></div>
