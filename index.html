@@ -14,14 +14,14 @@
 <meta property="og:site_name" content="Nitish Ranjan">
 <meta property="og:title" content="Nitish Ranjan — AI / Technical Product Manager">
 <meta property="og:description" content="GenAI, RAG, enterprise SaaS and data products. From customer discovery to AI prototyping, rollout and adoption.">
-<meta property="og:image" content="https://nitishhranjan.github.io/nitish-portfolio/og-card.jpg">
+<meta property="og:image" content="https://nitishhranjan.github.io/nitish-portfolio/og-card.jpg?v=20260921-ai-pm">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Nitish Ranjan — AI / Technical Product Manager. 0→1 and scale, enterprise SaaS, AI products.">
+<meta property="og:image:alt" content="Nitish Ranjan — AI / Technical Product Manager. 0→1 and scale, enterprise SaaS, AI and data products.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Nitish Ranjan — AI / Technical Product Manager">
 <meta name="twitter:description" content="GenAI, RAG, enterprise SaaS and data products. From customer discovery to AI prototyping, rollout and adoption.">
-<meta name="twitter:image" content="https://nitishhranjan.github.io/nitish-portfolio/og-card.jpg">
+<meta name="twitter:image" content="https://nitishhranjan.github.io/nitish-portfolio/og-card.jpg?v=20260921-ai-pm">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23070a12'/><text y='68' x='50' text-anchor='middle' font-size='56' font-family='Georgia,serif' fill='%2322d3ee'>N</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,6 +54,9 @@ body{
 .wrap{max-width:var(--max);margin:0 auto;padding:0 28px;}
 .narrow{max-width:var(--narrow);}
 a{color:var(--accent);text-decoration:none;}
+a:focus-visible,button:focus-visible{
+  outline:3px solid var(--accent);outline-offset:3px;
+}
 h1,h2,h3,h4{color:var(--ink);margin:0;line-height:1.2;letter-spacing:-.02em;}
 p{margin:0 0 1.05rem;}
 .serif{font-family:"Instrument Serif",Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.01em;}
@@ -85,6 +88,7 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
 .nav-links a{
   font-size:.875rem;color:var(--muted);padding:7px 12px;border-radius:8px;
   font-weight:500;transition:color .18s ease,background .18s ease;
+  display:inline-flex;align-items:center;min-height:44px;
 }
 .nav-links a:hover{color:var(--ink);background:var(--soft);}
 .nav-links a.active{color:var(--accent);background:rgba(14,127,150,.07);}
@@ -93,7 +97,7 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
   font-weight:500;font-size:.875rem;
 }
 .nav-cta:hover{background:var(--accent);}
-.burger{display:none;background:none;border:1px solid var(--line);border-radius:9px;padding:8px 10px;cursor:pointer;}
+.burger{display:none;background:none;border:1px solid var(--line);border-radius:9px;padding:8px 10px;cursor:pointer;width:44px;height:44px;}
 .burger span{display:block;width:17px;height:1.6px;background:var(--ink);margin:3.5px 0;border-radius:2px;transition:.25s;}
 
 /* ---------- hero ---------- */
@@ -205,7 +209,7 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
 .acc-link{
   display:inline-flex;align-items:center;gap:7px;font-size:.845rem;font-weight:600;
   padding:7px 14px;border-radius:9px;border:1px solid var(--line);
-  background:#fff;color:var(--body);
+  background:#fff;color:var(--body);min-height:44px;
   transition:transform .16s ease,box-shadow .16s ease,background .16s ease,border-color .16s ease,color .16s ease;
 }
 .acc-link:hover{border-color:#cfd8e3;box-shadow:var(--shadow);transform:translateY(-1px);}
@@ -220,7 +224,7 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
 .exp-tabs{display:flex;flex-direction:column;gap:8px;position:sticky;top:96px;}
 .exp-tab{
   width:100%;text-align:left;background:transparent;border:1px solid transparent;border-left:2px solid transparent;
-  border-radius:10px;padding:13px 14px;font:inherit;color:var(--muted);cursor:pointer;
+  border-radius:10px;padding:13px 14px;font:inherit;color:var(--muted);cursor:pointer;min-height:56px;
   transition:background .18s ease,border-color .18s ease,color .18s ease,box-shadow .18s ease;
 }
 .exp-tab:hover{background:#fff;border-color:var(--line);color:var(--body);}
@@ -247,7 +251,7 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
 .chipbtn{
   border:1px solid var(--line);background:#fff;color:var(--muted);
   padding:8px 16px;border-radius:999px;font:inherit;font-size:.865rem;font-weight:500;
-  cursor:pointer;transition:.18s ease;
+  cursor:pointer;transition:.18s ease;min-height:44px;
 }
 .chipbtn:hover{color:var(--ink);border-color:#cfd8e3;}
 .chipbtn.on{background:var(--ink);color:#fff;border-color:var(--ink);}
@@ -314,7 +318,7 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
 .foot{
   border-top:1px solid rgba(255,255,255,.08);margin-top:66px;padding-top:26px;
   display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
-  font-size:.83rem;color:#5f6f86;
+  font-size:.83rem;color:#8290a4;
 }
 
 /* ---------- reveal ---------- */
@@ -323,6 +327,7 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
 @media (prefers-reduced-motion:reduce){
   .rv{opacity:1;transform:none;transition:none;}
   html{scroll-behavior:auto;}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;}
 }
 
 /* ---------- responsive ---------- */
@@ -350,6 +355,8 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
   .nav-links a{padding:11px 14px;}
   .nav-cta{text-align:center;margin-top:4px;}
   .burger{display:block;}
+  .exp-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));overflow:visible;gap:8px;padding-bottom:0;}
+  .exp-tab{min-width:0;}
   .acc-head{padding:20px;gap:14px;}
   .acc-inner{padding:0 20px 22px;}
   .acc-links{padding:0 20px 18px;}
@@ -367,7 +374,7 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
   "name": "Nitish Ranjan",
   "url": "https://nitishhranjan.github.io/nitish-portfolio/",
   "image": "https://nitishhranjan.github.io/nitish-portfolio/og-card.jpg",
-  "jobTitle": "Senior Product & Business Analyst",
+  "jobTitle": "AI / Technical Product Manager",
   "worksFor": {"@type": "Organization", "name": "AiDash"},
   "alumniOf": {"@type": "CollegeOrUniversity", "name": "Indian Institute of Technology, Kharagpur"},
   "address": {"@type": "PostalAddress", "addressLocality": "Gurugram", "addressCountry": "IN"},
@@ -386,11 +393,11 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
 <nav id="nav">
   <div class="nav-in">
     <a href="#top" class="brand">Nitish<span>.</span></a>
-    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <button class="burger" id="burger" type="button" aria-label="Menu" aria-controls="navlinks" aria-expanded="false"><span></span><span></span><span></span></button>
     <div class="nav-links" id="navlinks">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
       <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#education">Education</a>
       <a href="#contact" class="nav-cta">Get in touch</a>
@@ -412,118 +419,11 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
     </p>
     <div class="hero-cta">
       <a href="#work" class="btn btn-light">View selected work</a>
-      <a href="Nitish_Ranjan_PM_Resume.pdf?v=20260921-copy" download="Nitish_Ranjan_PM_Resume.pdf" class="btn btn-ghost">Download résumé</a>
+      <a href="Nitish_Ranjan_PM_Resume.pdf?v=20260921-final" target="_blank" rel="noopener" class="btn btn-light">View résumé</a>
       <a href="https://locality-lens-ten.vercel.app/" target="_blank" rel="noopener" class="btn btn-ghost">Try Locality Lens ↗</a>
-      <a href="Nitish_Ranjan_PM_Resume.pdf?v=20260921-copy" target="_blank" rel="noopener" class="btn btn-light">View PM résumé (PDF)</a>
     </div>
   </div>
 </header>
-
-<!-- ================= ABOUT ================= -->
-<section id="about">
-  <div class="wrap">
-    <div class="rv">
-      <div class="eyebrow">About me</div>
-      <h2 class="s-title">Where product judgment meets technical depth.</h2>
-    </div>
-    <div class="about-grid">
-      <div class="about-body rv">
-        <p>I'm an IIT Kharagpur graduate with <strong>3+ years across AI, data and enterprise SaaS</strong>. At AiDash, I worked between utility customers, Product, Engineering and Data Science, translating workflow problems into requirements and following them through UAT, rollout and adoption.</p>
-        <p>My customer-facing work focused on AiDash's <strong>IVMS platform, which serves 100+ external utility customers</strong>. I led discovery and solution definition with <strong>~15 utility customers</strong>, including understanding how fixed budgets affected maintenance decisions.</p>
-        <p>Separately, I personally built the MVP for an <strong>internal RAG/LangGraph analytics product</strong>. Engineering partnered on productionization for <strong>100+ internal users</strong>. I enjoy combining that hands-on AI work with customer discovery and product judgment.</p>
-      </div>
-      <div class="rv about-side">
-      <picture>
-        <source srcset="nitish.webp" type="image/webp">
-        <img class="portrait" src="nitish.jpg" alt="Nitish Ranjan" loading="lazy" decoding="async">
-      </picture>
-      <div class="facts">
-        <dl style="margin:0;">
-          <div class="fact"><dt>Focus</dt><dd>AI / Technical Product Management</dd></div>
-          <div class="fact"><dt>Based in</dt><dd>Gurugram, India</dd></div>
-          <div class="fact"><dt>Experience</dt><dd>3+ years</dd></div>
-          <div class="fact"><dt>Education</dt><dd>Mining Engineering, IIT Kharagpur</dd></div>
-        </dl>
-      </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= EXPERIENCE ================= -->
-<section id="experience" style="background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
-  <div class="wrap">
-    <div class="rv">
-      <div class="eyebrow">Experience</div>
-      <h2 class="s-title">Experience behind the work</h2>
-    </div>
-
-    <div class="exp-shell rv">
-      <div class="exp-tabs" role="tablist" aria-label="Experience roles">
-        <button class="exp-tab active" type="button" role="tab" aria-selected="true" data-exp="aidash"><b>AiDash</b><span>Product &amp; AI SaaS</span></button>
-        <button class="exp-tab" type="button" role="tab" aria-selected="false" data-exp="ipac"><b>I-PAC</b><span>Data analytics</span></button>
-        <button class="exp-tab" type="button" role="tab" aria-selected="false" data-exp="analyttica"><b>Analyttica</b><span>PM internship</span></button>
-        <button class="exp-tab" type="button" role="tab" aria-selected="false" data-exp="frontrow"><b>FrontRow</b><span>Product &amp; analytics</span></button>
-      </div>
-
-      <div class="exp-panels">
-        <article class="exp-panel active" data-exp-panel="aidash" role="tabpanel">
-          <div class="exp-head">
-            <h3>Product Manager | Senior Business Analyst <span>@ AiDash</span></h3>
-            <div class="exp-date-pill">Apr 2024 – Aug 2026</div>
-          </div>
-          <p class="exp-summary">AI-powered geospatial SaaS for utilities. IVMS serves 100+ external utility customers; the RAG analytics product below served internal teams.</p>
-          <div class="exp-metrics"><span class="exp-metric">~20% fewer analytics tickets</span><span class="exp-metric">~25% higher DAUs &amp; completed jobs</span><span class="exp-metric">4/5 pilots converted</span></div>
-          <ul>
-            <li>Built a <b>0→1 RAG/LangGraph self-service analytics MVP</b> in Python/Streamlit with schema retrieval, SQL generation and guardrails; partnered with Engineering to productionize on Snowflake for <b>100+ internal users, cutting ad-hoc analytics tickets ~20% in 3 months</b>.</li>
-            <li><b>Identified budget constraints as an adoption barrier</b> through customer discovery; defined a budget-aware prioritization product with Data Science across <b>~20K feeders / 10 networks</b>, lifting <b>DAUs and completed jobs ~25% within 3 months and miles trimmed ~30% YoY</b>.</li>
-            <li><b>Productized recurring custom analytics workflows into 10+ configurable platform capabilities</b>; owned requirements, acceptance criteria, UAT and rollout with Engineering/Platform, expanding automation coverage from <b>~70% to ~80% of client projects</b>.</li>
-            <li><b>Redesigned a data-integration workflow</b> for matching utility assets across multi-year geospatial datasets; introduced multi-pass matching and configurable parameters, <b>improving precision by 3pp, cutting processing time ~80% and GIS contractor cost ~50%</b>.</li>
-            <li><b>Led discovery and solution definition across ~15 utility customers</b>, translating workflows and constraints into product requirements and helping convert <b>4 of 5 pilots into full deployments</b>.</li>
-          </ul>
-          <a class="exp-link" href="#work">View related case study ↓</a>
-          <div class="stackline"><b>Stack:</b> Python · SQL · Snowflake · LangGraph · RAG · Streamlit · Workflow automation</div>
-        </article>
-
-        <article class="exp-panel" data-exp-panel="ipac" role="tabpanel">
-          <div class="exp-head">
-            <h3>Senior Analyst <span>@ Indian Political Action Committee</span></h3>
-            <div class="exp-date-pill">Jun 2023 – Apr 2024</div>
-          </div>
-          <p class="exp-summary">Built reporting and decision-support workflows for campaign teams across Bengal, Bihar and Andhra.</p>
-          <ul>
-            <li>Analyzed live survey data to support campaign strategy, messaging, constituency prioritization and issue prioritization.</li>
-            <li>Built SQL/R/Excel reporting workflows that cut survey report-generation time <b>80%</b>.</li>
-            <li>Built an alliance-simulation module using survey and historical data to estimate constituency-level outcomes across coalition scenarios, achieving <b>~1% MAE</b>.</li>
-          </ul>
-          <div class="stackline"><b>Stack:</b> R · Python · SQL · Tableau · QGIS · Excel VBA</div>
-        </article>
-
-        <article class="exp-panel" data-exp-panel="analyttica" role="tabpanel">
-          <div class="exp-head">
-            <h3>Product Management Intern <span>@ Analyttica Datalab</span></h3>
-            <div class="exp-date-pill">Aug 2022 – Oct 2022</div>
-          </div>
-          <p class="exp-summary">Worked on experimentation, funnel tracking, and user understanding for customer EMI behavior.</p>
-          <ul>
-            <li>Ran an EMI-tenure experiment to inform default-tenure recommendations.</li>
-            <li>Identified preference for <b>3–6 month tenures</b> on small/mid-ticket purchases versus <b>~12 months</b> on higher-ticket purchases.</li>
-            <li>Instrumented funnel tracking across Mixpanel, Google Analytics, and CleverTap and built personas and journey maps that shaped prioritization.</li>
-          </ul>
-          <div class="stackline"><b>Stack:</b> Mixpanel · Google Analytics · CleverTap · SQL</div>
-        </article>
-
-        <article class="exp-panel" data-exp-panel="frontrow" role="tabpanel">
-          <div class="exp-head"><h3>Product &amp; Analytics Intern <span>@ FrontRow</span></h3><div class="exp-date-pill">Nov 2021 – Jan 2022</div></div>
-          <p class="exp-summary">Used behavioral funnel data to improve pricing, gamification and onboarding.</p>
-          <ul><li>Ran pricing and gamification experiments, reducing <b>bounce rate 10%</b>.</li><li>Redesigned onboarding based on user behavior, improving <b>retention from 55% to 78%</b>.</li></ul>
-          <div class="stackline"><b>Stack:</b> Mixpanel · Google Analytics · Behavioral funnel analysis</div>
-        </article>
-      </div>
-    </div>
-
-  </div>
-</section>
 
 <!-- ================= WORK ================= -->
 <section id="work">
@@ -535,23 +435,23 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
     </div>
 
     <div class="filters rv">
-      <button class="chipbtn on" data-f="all">All</button>
-      <button class="chipbtn" data-f="case">Case studies</button>
-      <button class="chipbtn" data-f="project">Projects</button>
+      <button class="chipbtn on" type="button" aria-pressed="true" data-f="all">All</button>
+      <button class="chipbtn" type="button" aria-pressed="false" data-f="case">Case studies</button>
+      <button class="chipbtn" type="button" aria-pressed="false" data-f="project">Projects</button>
     </div>
 
     <!-- CASE 1 -->
     <div class="acc rv open" data-type="case">
-      <button class="acc-head" aria-expanded="true">
+      <button class="acc-head" type="button" aria-expanded="true" aria-controls="case-rag-body">
         <div class="acc-main">
           <div class="kicker">0 → 1 · Internal product at AiDash</div>
           <div class="acc-top"><span class="acc-title">RAG / LangGraph self-service analytics</span></div>
           <p class="acc-sum">Built the MVP and partnered with Engineering to productionize it for <b>100+ internal users</b>, cutting <b>ad-hoc analytics tickets ~20% in 3 months</b>.</p>
           <div class="tags"><span class="tag">RAG</span><span class="tag">LangGraph</span><span class="tag">Python / Streamlit</span><span class="tag">Internal tooling</span></div>
         </div>
-        <span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        <span class="chev"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
       </button>
-      <div class="acc-body"><div class="acc-inner cs">
+      <div class="acc-body" id="case-rag-body"><div class="acc-inner cs">
         <div class="tldr"><dl>
           <dt>Users</dt><dd>100+ internal users at AiDash; separate from IVMS's 100+ external utility customer base.</dd>
           <dt>My role</dt><dd>Discovery, MVP build, product requirements, rollout and adoption.</dd>
@@ -570,40 +470,145 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
 
     <!-- CASE 2 -->
     <div class="acc rv" data-type="project">
-      <button class="acc-head" aria-expanded="false">
+      <button class="acc-head" type="button" aria-expanded="false" aria-controls="locality-lens-body">
         <div class="acc-main">
           <div class="kicker">0 → 1 · Personal project</div>
           <div class="acc-top"><span class="acc-title">Locality Lens — AI location intelligence</span></div>
           <p class="acc-sum">Built a LangGraph location-intelligence agent with dual-LLM routing and REST API integrations to fetch nearby points of interest, balancing latency, answer quality and grounded recommendations.</p>
           <div class="tags"><span class="tag">LangGraph</span><span class="tag">Geospatial AI</span><span class="tag">Groq + OSM</span></div>
         </div>
-        <span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        <span class="chev"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
       </button>
       <div class="acc-links">
         <a class="acc-link live" href="https://locality-lens-ten.vercel.app" target="_blank" rel="noopener"><span class="lv"></span>Live demo ↗</a>
         <a class="acc-link" href="https://github.com/nitishhranjan/locality-lens" target="_blank" rel="noopener">Source ↗</a>
       </div>
-      <div class="acc-body"><div class="acc-inner cs"><h5>What I built</h5><p>A location-intelligence tool using a stateful LangGraph agent, dual-LLM routing and REST API integrations to fetch points of interest around user-defined coordinates.</p><h5>Product focus</h5><p>Balanced latency, answer quality and grounded recommendations while prototyping an AI workflow for location decisions.</p></div></div>
+      <div class="acc-body" id="locality-lens-body"><div class="acc-inner cs"><h5>What I built</h5><p>A location-intelligence tool using a stateful LangGraph agent, dual-LLM routing and REST API integrations to fetch points of interest around user-defined coordinates.</p><h5>Product focus</h5><p>Balanced latency, answer quality and grounded recommendations while prototyping an AI workflow for location decisions.</p></div></div>
     </div>
 
     <!-- CASE 3 -->
     <div class="acc rv" data-type="project">
-      <button class="acc-head" aria-expanded="false">
+      <button class="acc-head" type="button" aria-expanded="false" aria-controls="rag-qa-body">
         <div class="acc-main">
           <div class="kicker">0 → 1 · Personal project</div>
           <div class="acc-top"><span class="acc-title">RAG document QA system</span></div>
           <p class="acc-sum">Built and deployed a RAG QA system with hybrid retrieval, multi-turn Q&amp;A and evaluation workflows to diagnose retrieval and answer failures and improve grounding.</p>
           <div class="tags"><span class="tag">Hybrid retrieval</span><span class="tag">Docker</span><span class="tag">AWS</span></div>
         </div>
-        <span class="chev"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        <span class="chev"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
       </button>
       <div class="acc-links">
         <a class="acc-link live" href="https://rag-document-qa-navy.vercel.app/" target="_blank" rel="noopener"><span class="lv"></span>Live demo ↗</a>
         <a class="acc-link" href="https://github.com/nitishhranjan/rag-document-qa-basic" target="_blank" rel="noopener">Source ↗</a>
       </div>
-      <div class="acc-body"><div class="acc-inner cs"><h5>What I built</h5><p>A document QA system with hybrid retrieval (dense + BM25/RRF), multi-turn Q&amp;A and evaluation workflows.</p><h5>Product focus</h5><p>Diagnosed retrieval and answer-quality failure modes to improve grounding and make document answers more useful.</p></div></div>
+      <div class="acc-body" id="rag-qa-body"><div class="acc-inner cs"><h5>What I built</h5><p>A document QA system with hybrid retrieval (dense + BM25/RRF), multi-turn Q&amp;A and evaluation workflows.</p><h5>Product focus</h5><p>Diagnosed retrieval and answer-quality failure modes to improve grounding and make document answers more useful.</p></div></div>
     </div>
 
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience" style="background:var(--soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Experience</div>
+      <h2 class="s-title">Experience behind the work</h2>
+    </div>
+
+    <div class="exp-shell rv">
+      <div class="exp-tabs" role="tablist" aria-label="Experience roles">
+        <button class="exp-tab active" id="tab-aidash" type="button" role="tab" aria-selected="true" aria-controls="panel-aidash" tabindex="0" data-exp="aidash"><b>AiDash</b><span>Product &amp; AI SaaS</span></button>
+        <button class="exp-tab" id="tab-ipac" type="button" role="tab" aria-selected="false" aria-controls="panel-ipac" tabindex="-1" data-exp="ipac"><b>I-PAC</b><span>Data analytics</span></button>
+        <button class="exp-tab" id="tab-analyttica" type="button" role="tab" aria-selected="false" aria-controls="panel-analyttica" tabindex="-1" data-exp="analyttica"><b>Analyttica</b><span>PM internship</span></button>
+        <button class="exp-tab" id="tab-frontrow" type="button" role="tab" aria-selected="false" aria-controls="panel-frontrow" tabindex="-1" data-exp="frontrow"><b>FrontRow</b><span>Product &amp; analytics</span></button>
+      </div>
+
+      <div class="exp-panels">
+        <article class="exp-panel active" id="panel-aidash" data-exp-panel="aidash" role="tabpanel" aria-labelledby="tab-aidash">
+          <div class="exp-head">
+            <h3>Product Manager | Senior Business Analyst <span>@ AiDash</span></h3>
+            <div class="exp-date-pill">Apr 2024 – Aug 2026</div>
+          </div>
+          <p class="exp-summary">AI-powered geospatial SaaS for utilities. IVMS serves 100+ external utility customers; the RAG analytics product below served internal teams.</p>
+          <div class="exp-metrics"><span class="exp-metric">~20% fewer analytics tickets</span><span class="exp-metric">~25% higher DAUs &amp; completed jobs</span><span class="exp-metric">4/5 pilots converted</span></div>
+          <ul>
+            <li>Built a <b>0→1 RAG/LangGraph self-service analytics MVP</b> in Python/Streamlit with schema retrieval, SQL generation and guardrails; partnered with Engineering to productionize on Snowflake for <b>100+ internal users, cutting ad-hoc analytics tickets ~20% in 3 months</b>.</li>
+            <li><b>Identified budget constraints as an adoption barrier</b> through customer discovery; defined a budget-aware prioritization product with Data Science across <b>~20K feeders / 10 networks</b>, lifting <b>DAUs and completed jobs ~25% within 3 months and miles trimmed ~30% YoY</b>.</li>
+            <li><b>Productized recurring custom analytics workflows into 10+ configurable platform capabilities</b>; owned requirements, acceptance criteria, UAT and rollout with Engineering/Platform, expanding automation coverage from <b>~70% to ~80% of client projects</b>.</li>
+            <li><b>Redesigned a data-integration workflow</b> for matching utility assets across multi-year geospatial datasets; introduced multi-pass matching and configurable parameters, <b>improving precision by 3pp, cutting processing time ~80% and GIS contractor cost ~50%</b>.</li>
+            <li><b>Led discovery and solution definition across ~15 utility customers</b>, translating workflows and constraints into product requirements and helping convert <b>4 of 5 pilots into full deployments</b>.</li>
+          </ul>
+          <a class="exp-link" href="#work">View related case study ↓</a>
+          <div class="stackline"><b>Stack:</b> Python · SQL · Snowflake · LangGraph · RAG · Streamlit · Workflow automation</div>
+        </article>
+
+        <article class="exp-panel" id="panel-ipac" data-exp-panel="ipac" role="tabpanel" aria-labelledby="tab-ipac" hidden>
+          <div class="exp-head">
+            <h3>Senior Analyst <span>@ Indian Political Action Committee</span></h3>
+            <div class="exp-date-pill">Jun 2023 – Apr 2024</div>
+          </div>
+          <p class="exp-summary">Built reporting and decision-support workflows for campaign teams across Bengal, Bihar and Andhra.</p>
+          <ul>
+            <li>Analyzed live survey data to support campaign strategy, messaging, constituency prioritization and issue prioritization.</li>
+            <li>Built SQL/R/Excel reporting workflows that cut survey report-generation time <b>80%</b>.</li>
+            <li>Built an alliance-simulation module using survey and historical data to estimate constituency-level outcomes across coalition scenarios, achieving <b>~1% MAE</b>.</li>
+          </ul>
+          <div class="stackline"><b>Stack:</b> R · Python · SQL · Tableau · QGIS · Excel VBA</div>
+        </article>
+
+        <article class="exp-panel" id="panel-analyttica" data-exp-panel="analyttica" role="tabpanel" aria-labelledby="tab-analyttica" hidden>
+          <div class="exp-head">
+            <h3>Product Management Intern <span>@ Analyttica Datalab</span></h3>
+            <div class="exp-date-pill">Aug 2022 – Oct 2022</div>
+          </div>
+          <p class="exp-summary">Worked on experimentation, funnel tracking, and user understanding for customer EMI behavior.</p>
+          <ul>
+            <li>Ran an EMI-tenure experiment to inform default-tenure recommendations.</li>
+            <li>Identified preference for <b>3–6 month tenures</b> on small/mid-ticket purchases versus <b>~12 months</b> on higher-ticket purchases.</li>
+            <li>Instrumented funnel tracking across Mixpanel, Google Analytics, and CleverTap and built personas and journey maps that shaped prioritization.</li>
+          </ul>
+          <div class="stackline"><b>Stack:</b> Mixpanel · Google Analytics · CleverTap · SQL</div>
+        </article>
+
+        <article class="exp-panel" id="panel-frontrow" data-exp-panel="frontrow" role="tabpanel" aria-labelledby="tab-frontrow" hidden>
+          <div class="exp-head"><h3>Product &amp; Analytics Intern <span>@ FrontRow</span></h3><div class="exp-date-pill">Nov 2021 – Jan 2022</div></div>
+          <p class="exp-summary">Used behavioral funnel data to improve pricing, gamification and onboarding.</p>
+          <ul><li>Ran pricing and gamification experiments, reducing <b>bounce rate 10%</b>.</li><li>Redesigned onboarding based on user behavior, improving <b>retention from 55% to 78%</b>.</li></ul>
+          <div class="stackline"><b>Stack:</b> Mixpanel · Google Analytics · Behavioral funnel analysis</div>
+        </article>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">About me</div>
+      <h2 class="s-title">Where product judgment meets technical depth.</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-body rv">
+        <p>I'm an IIT Kharagpur graduate with <strong>3+ years across product, analytics, AI and enterprise SaaS</strong>. At AiDash, I worked at the intersection of utility customers, Product, Engineering and Data Science—leading discovery with <strong>~15 utility customers</strong>, translating operational constraints into requirements, and staying involved through UAT, rollout and adoption for an IVMS platform serving <strong>100+ external utilities</strong>.</p>
+        <p>Alongside that customer-facing work, I personally built the Python/Streamlit MVP for an <strong>internal RAG/LangGraph self-service analytics product</strong>; Engineering then partnered on productionization for <strong>100+ internal users</strong>. The work I enjoy most combines customer context, product judgment and enough technical depth to turn an ambiguous problem into something teams can use.</p>
+      </div>
+      <div class="rv about-side">
+      <picture>
+        <source srcset="nitish.webp" type="image/webp">
+        <img class="portrait" src="nitish.jpg" alt="Portrait of Nitish Ranjan" loading="lazy" decoding="async">
+      </picture>
+      <div class="facts">
+        <dl style="margin:0;">
+          <div class="fact"><dt>Focus</dt><dd>AI / Technical Product Management</dd></div>
+          <div class="fact"><dt>Based in</dt><dd>Gurugram, India</dd></div>
+          <div class="fact"><dt>Experience</dt><dd>3+ years</dd></div>
+          <div class="fact"><dt>Education</dt><dd>Mining Engineering, IIT Kharagpur</dd></div>
+        </dl>
+      </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -698,7 +703,7 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
         <a href="mailto:ranjannitish30@gmail.com" class="btn btn-light">ranjannitish30@gmail.com</a>
         <a href="https://linkedin.com/in/ranjan-nitish" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
         <a href="https://github.com/nitishhranjan" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
-        <a href="Nitish_Ranjan_PM_Resume.pdf?v=20260921-copy" target="_blank" rel="noopener" class="btn btn-ghost">View PM résumé (PDF)</a>
+        <a href="Nitish_Ranjan_PM_Resume.pdf?v=20260921-final" target="_blank" rel="noopener" class="btn btn-ghost">View résumé</a>
       </div>
     </div>
     <div class="foot">
@@ -739,17 +744,36 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
   /* --- experience tabs --- */
   var expTabs = document.querySelectorAll('.exp-tab');
   var expPanels = document.querySelectorAll('.exp-panel');
+  function activateExpTab(tab, moveFocus){
+    var target = tab.dataset.exp;
+    expTabs.forEach(function(t){
+      var active = t === tab;
+      t.classList.toggle('active', active);
+      t.setAttribute('aria-selected', active ? 'true' : 'false');
+      t.setAttribute('tabindex', active ? '0' : '-1');
+    });
+    expPanels.forEach(function(panel){
+      var active = panel.dataset.expPanel === target;
+      panel.classList.toggle('active', active);
+      panel.hidden = !active;
+    });
+    if(moveFocus) tab.focus();
+  }
   expTabs.forEach(function(tab){
     tab.addEventListener('click', function(){
-      var target = tab.dataset.exp;
-      expTabs.forEach(function(t){
-        var active = t === tab;
-        t.classList.toggle('active', active);
-        t.setAttribute('aria-selected', active ? 'true' : 'false');
-      });
-      expPanels.forEach(function(panel){
-        panel.classList.toggle('active', panel.dataset.expPanel === target);
-      });
+      activateExpTab(tab, false);
+    });
+    tab.addEventListener('keydown', function(e){
+      var keys = ['ArrowRight','ArrowDown','ArrowLeft','ArrowUp','Home','End'];
+      if(keys.indexOf(e.key) === -1) return;
+      e.preventDefault();
+      var tabs = [].slice.call(expTabs);
+      var index = tabs.indexOf(tab);
+      if(e.key === 'Home') index = 0;
+      else if(e.key === 'End') index = tabs.length - 1;
+      else if(e.key === 'ArrowRight' || e.key === 'ArrowDown') index = (index + 1) % tabs.length;
+      else index = (index - 1 + tabs.length) % tabs.length;
+      activateExpTab(tabs[index], true);
     });
   });
 
@@ -757,12 +781,13 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
   var btns = document.querySelectorAll('.chipbtn');
   btns.forEach(function(b){
     b.addEventListener('click', function(){
-      btns.forEach(function(x){x.classList.remove('on');});
+      btns.forEach(function(x){x.classList.remove('on');x.setAttribute('aria-pressed','false');});
       b.classList.add('on');
+      b.setAttribute('aria-pressed','true');
       var f = b.dataset.f;
       document.querySelectorAll('#work .acc').forEach(function(card){
         var show = (f === 'all' || card.dataset.type === f);
-        card.style.display = show ? '' : 'none';
+        card.hidden = !show;
       });
     });
   });
@@ -785,9 +810,20 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
   /* --- mobile menu --- */
   var burger = document.getElementById('burger');
   var navlinks = document.getElementById('navlinks');
-  burger.addEventListener('click', function(){ navlinks.classList.toggle('open'); });
+  function setMenu(open){
+    navlinks.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.setAttribute('aria-label', open ? 'Close menu' : 'Menu');
+  }
+  burger.addEventListener('click', function(){ setMenu(!navlinks.classList.contains('open')); });
   navlinks.addEventListener('click', function(e){
-    if(e.target.tagName === 'A') navlinks.classList.remove('open');
+    if(e.target.tagName === 'A') setMenu(false);
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && navlinks.classList.contains('open')){
+      setMenu(false);
+      burger.focus();
+    }
   });
 
   /* --- reveal on scroll --- */
