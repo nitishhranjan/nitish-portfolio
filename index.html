@@ -515,6 +515,7 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
         </div>
         <span class="chev"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
       </button>
+      <div class="acc-body" id="case-rag-body">
       <div class="deck-viewer" id="analytics-deck" tabindex="0" role="group" aria-label="Self-service analytics presentation">
         <div class="deck-viewer-head">
           <div>
@@ -538,7 +539,7 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
         </div>
         <p class="deck-hint">Use the arrow keys or swipe to navigate.</p>
       </div>
-      <div class="acc-body" id="case-rag-body"><div class="acc-inner cs">
+      <div class="acc-inner cs">
         <div class="tldr"><dl>
           <dt>Users</dt><dd>100+ internal users at AiDash; separate from IVMS's 100+ external utility customer base.</dd>
           <dt>My role</dt><dd>Discovery, MVP build, product requirements, rollout and adoption.</dd>
@@ -840,6 +841,11 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
       if(deckIndex < deckSlides.length - 1){
         var preload = new Image();
         preload.src = deckPath(deckIndex + 1);
+      }
+      var deckAccordion = deckViewer.closest('.acc');
+      var deckBody = deckViewer.closest('.acc-body');
+      if(deckAccordion && deckAccordion.classList.contains('open')){
+        deckBody.style.maxHeight = deckBody.scrollHeight + 'px';
       }
     }
     deckPrev.addEventListener('click', function(){ renderDeckSlide(deckIndex - 1); });
