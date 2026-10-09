@@ -495,7 +495,7 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
     <div class="rv">
       <div class="eyebrow">Work</div>
       <h2 class="s-title">Case studies &amp; projects</h2>
-      <p class="s-sub">Start with the AiDash case study; the personal projects show how I think through AI product problems end to end.</p>
+      <p class="s-sub">Start with shipped work at AiDash; the independent work below shows how I take AI product problems from framing and product judgment through prototyping and hands-on building.</p>
     </div>
 
     <div class="filters rv">
@@ -557,12 +557,43 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
     </div>
 
     <!-- CASE 2 -->
+    <div class="acc rv" data-type="case">
+      <button class="acc-head" type="button" aria-expanded="false" aria-controls="decisionos-body">
+        <div class="acc-main">
+          <div class="kicker">0 → 1 · Independent product case study</div>
+          <div class="acc-top"><span class="acc-title">DecisionOS — Buyer Decision Intelligence</span></div>
+          <p class="acc-sum">An independent concept and interactive prototype for complex enterprise sales. Defined the target wedge, Decision Twin model, cold-start MVP and human–AI workflow, then built Finance and Security scenarios to explore the experience.</p>
+          <div class="tags"><span class="tag">AI Product Strategy</span><span class="tag">Enterprise SaaS</span><span class="tag">Human-in-the-loop</span><span class="tag">AI Evaluation</span><span class="tag">CRM</span></div>
+        </div>
+        <span class="chev"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+      </button>
+      <div class="acc-links">
+        <a class="acc-link" href="https://decisionos-prototype.vercel.app/" target="_blank" rel="noopener">Explore interactive prototype ↗</a>
+      </div>
+      <div class="acc-body" id="decisionos-body"><div class="acc-inner cs">
+        <figure style="margin:0 0 30px;">
+          <img src="decisionos/preview.webp" alt="DecisionOS prototype attention queue showing Finance and Security decision gaps in fictional enterprise opportunities" width="1280" height="1291" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:12px;">
+          <figcaption style="margin-top:8px;font-size:.8rem;color:var(--muted);">Independent concept/prototype, not a launched product. All scenarios and figures are fictional.</figcaption>
+        </figure>
+        <div class="case-snapshot">
+          <div class="snapshot-card"><h5>Problem</h5><p>Seller progress ≠ buyer progress. CRM activities and stages can leave unresolved stakeholders, decision criteria, approvals and commitments out of view.</p></div>
+          <div class="snapshot-card"><h5>Product bet</h5><p>Make buyer decision state the operating object: an evidence-backed Decision Twin that tracks what must become true for a buying group to decide.</p></div>
+          <div class="snapshot-card"><h5>My contribution</h5><p>Market framing, target-user and MVP scope, workflows, AI–human boundaries, architecture and evaluation approach, plus an interactive prototype.</p></div>
+        </div>
+        <h5>Scope</h5><p>Complex enterprise B2B new-logo sales, from qualified opportunity to commercial decision. The prototype explores Finance validation and stalled Security approval.</p>
+        <h5>Core workflow</h5><p>Evidence → Decision State → Decision Gap → Intervention → Human/AI Action → Buyer Response → Updated State.</p>
+        <h5>Cold-start AI decision</h5><p>No predictive win score without outcome data. Start with observable evidence, a defined decision model, explicit rules and grounded LLM interpretation; keep verified facts, reported claims, inferences and unknowns distinct.</p>
+        <h5>Human-in-the-loop philosophy</h5><p><b>Automate work. Escalate judgment.</b> AI prepares evidence and suggested interventions; people validate uncertainty, approve customer-facing actions and own consequential decisions.</p>
+      </div></div>
+    </div>
+
+    <!-- CASE 3 -->
     <div class="acc rv" data-type="project">
       <button class="acc-head" type="button" aria-expanded="false" aria-controls="locality-lens-body">
         <div class="acc-main">
           <div class="kicker">0 → 1 · Personal project</div>
           <div class="acc-top"><span class="acc-title">Locality Lens — AI location intelligence</span></div>
-          <p class="acc-sum">Built a LangGraph location-intelligence agent with dual-LLM routing and REST API integrations to fetch nearby points of interest, balancing latency, answer quality and grounded recommendations.</p>
+          <p class="acc-sum">Took Locality Lens from idea to a deployed location-intelligence product — defining the user problem, making product and AI/UX decisions, and personally coding meaningful parts of the implementation.</p>
           <div class="tags"><span class="tag">LangGraph</span><span class="tag">Geospatial AI</span><span class="tag">Groq + OSM</span></div>
         </div>
         <span class="chev"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
@@ -571,10 +602,10 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
         <a class="acc-link live" href="https://locality-lens-ten.vercel.app" target="_blank" rel="noopener"><span class="lv"></span>Live demo ↗</a>
         <a class="acc-link" href="https://github.com/nitishhranjan/locality-lens" target="_blank" rel="noopener">Source ↗</a>
       </div>
-      <div class="acc-body" id="locality-lens-body"><div class="acc-inner cs"><h5>What I built</h5><p>A location-intelligence tool using a stateful LangGraph agent, dual-LLM routing and REST API integrations to fetch points of interest around user-defined coordinates.</p><h5>Product focus</h5><p>Balanced latency, answer quality and grounded recommendations while prototyping an AI workflow for location decisions.</p></div></div>
+      <div class="acc-body" id="locality-lens-body"><div class="acc-inner cs"><h5>What I built</h5><p>A location-intelligence tool using a stateful LangGraph agent, dual-LLM routing and REST API integrations to fetch points of interest around user-defined coordinates.</p><h5>My role</h5><p>Owned the idea, product definition, UX/workflow and AI architecture decisions, hands-on implementation and deployment.</p><h5>Product focus</h5><p>Balanced latency, answer quality and grounded recommendations in a working product for everyday location decisions.</p></div></div>
     </div>
 
-    <!-- CASE 3 -->
+    <!-- CASE 4 -->
     <div class="acc rv" data-type="project">
       <button class="acc-head" type="button" aria-expanded="false" aria-controls="rag-qa-body">
         <div class="acc-main">
