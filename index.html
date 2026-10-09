@@ -570,11 +570,31 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
       <div class="acc-links">
         <a class="acc-link" href="https://decisionos-prototype.vercel.app/" target="_blank" rel="noopener">Explore interactive prototype ↗</a>
       </div>
-      <div class="acc-body" id="decisionos-body"><div class="acc-inner cs">
-        <figure style="margin:0 0 30px;">
-          <img src="decisionos/preview.webp" alt="DecisionOS prototype attention queue showing Finance and Security decision gaps in fictional enterprise opportunities" width="1280" height="1291" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:12px;">
-          <figcaption style="margin-top:8px;font-size:.8rem;color:var(--muted);">Independent concept/prototype, not a launched product. All scenarios and figures are fictional.</figcaption>
-        </figure>
+      <div class="acc-body" id="decisionos-body">
+      <div class="deck-viewer" id="decisionos-deck" tabindex="0" role="group" aria-label="DecisionOS product case study presentation">
+        <div class="deck-viewer-head">
+          <div>
+            <span class="deck-kicker">Independent product case study</span>
+            <strong class="deck-title" id="decisionos-deck-slide-title">Reimagine CRM around the buyer’s decision</strong>
+          </div>
+          <span class="deck-count" aria-live="polite"><span id="decisionos-deck-current">1</span> / 18</span>
+        </div>
+        <div class="deck-stage">
+          <img id="decisionos-deck-slide-image" src="decisionos/slides/decisionos-01.webp" alt="Presentation slide 1: Reimagine CRM around the buyer’s decision" width="1467" height="826" loading="lazy" decoding="async">
+        </div>
+        <div class="deck-controls">
+          <div class="deck-nav">
+            <button class="deck-nav-btn" id="decisionos-deck-prev" type="button" aria-label="Previous DecisionOS slide" disabled>← Previous</button>
+            <button class="deck-nav-btn" id="decisionos-deck-next" type="button" aria-label="Next DecisionOS slide">Next →</button>
+          </div>
+          <div class="deck-actions">
+            <a class="acc-link" href="decisionos/Nitish_Ranjan_DecisionOS_Product_Case_Study.pdf" target="_blank" rel="noopener">Open presentation ↗</a>
+            <a class="acc-link" href="decisionos/Nitish_Ranjan_DecisionOS_Product_Case_Study.pptx" download="Nitish_Ranjan_DecisionOS_Product_Case_Study.pptx">Download Presentation</a>
+          </div>
+        </div>
+        <p class="deck-hint">Use the arrow keys or swipe to navigate.</p>
+      </div>
+      <div class="acc-inner cs">
         <div class="case-snapshot">
           <div class="snapshot-card"><h5>Problem</h5><p>Seller progress ≠ buyer progress. CRM activities and stages can leave unresolved stakeholders, decision criteria, approvals and commitments out of view.</p></div>
           <div class="snapshot-card"><h5>Product bet</h5><p>Make buyer decision state the operating object: an evidence-backed Decision Twin that tracks what must become true for a buying group to decide.</p></div>
@@ -847,19 +867,20 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
     'What this project taught me about AI product management',
     'Thank you'
   ];
-  var deckViewer = document.getElementById('analytics-deck');
-  if(deckViewer){
-    var deckImage = document.getElementById('deck-slide-image');
-    var deckTitle = document.getElementById('deck-slide-title');
-    var deckCurrent = document.getElementById('deck-current');
-    var deckPrev = document.getElementById('deck-prev');
-    var deckNext = document.getElementById('deck-next');
+  function initDeck(viewerId, deckSlides, pathPrefix, controlPrefix){
+    var deckViewer = document.getElementById(viewerId);
+    if(!deckViewer) return;
+    var deckImage = document.getElementById(controlPrefix + 'deck-slide-image');
+    var deckTitle = document.getElementById(controlPrefix + 'deck-slide-title');
+    var deckCurrent = document.getElementById(controlPrefix + 'deck-current');
+    var deckPrev = document.getElementById(controlPrefix + 'deck-prev');
+    var deckNext = document.getElementById(controlPrefix + 'deck-next');
     var deckIndex = 0;
     var touchStartX = 0;
     var touchStartY = 0;
 
     function deckPath(index){
-      return 'deck-slides/self-service-analytics-' + String(index + 1).padStart(2, '0') + '.webp';
+      return pathPrefix + String(index + 1).padStart(2, '0') + '.webp';
     }
     function renderDeckSlide(index){
       deckIndex = Math.max(0, Math.min(deckSlides.length - 1, index));
@@ -901,6 +922,28 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
     }, {passive:true});
     renderDeckSlide(0);
   }
+
+  initDeck('analytics-deck', deckSlides, 'deck-slides/self-service-analytics-', '');
+  initDeck('decisionos-deck', [
+    "Reimagine CRM around the buyer’s decision",
+    "The buyer is more autonomous — and the decision more complex",
+    "Decision intelligence is emerging. What becomes the primary object?",
+    "CRM stage ≠ buyer progress",
+    "Scope: complex enterprise B2B new-logo sales",
+    "The Decision Twin: a live model of what the buyer needs to decide",
+    "Don’t give sellers more tasks. Give them fewer, higher-leverage decisions",
+    "Evidence → intervention → buyer state change",
+    "Valuable before it learns",
+    "Probabilistic intelligence, deterministic control",
+    "Validate trust before autonomy — and behavior before revenue claims",
+    "Start as an intelligence layer. Become the system that learns how customers decide.",
+    "Competitive pressure test: pieces already exist",
+    "Decision Twin schema",
+    "Risk-tiered autonomy",
+    "Evaluation framework",
+    "Illustrative design-partner pilot",
+    "Sources, assumptions & integrity notes"
+], 'decisionos/slides/decisionos-', 'decisionos-');
 
   /* --- experience tabs --- */
   var expTabs = document.querySelectorAll('.exp-tab');
