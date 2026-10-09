@@ -225,7 +225,12 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
   background:#fff;box-shadow:0 8px 24px rgba(15,23,42,.06);
 }
 .deck-viewer:focus-visible{outline:2px solid var(--accent);outline-offset:3px;}
-.deck-viewer-head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;padding:16px 18px 14px;}
+.deck-viewer-head{cursor:pointer;list-style:none;display:flex;align-items:flex-start;justify-content:space-between;gap:18px;padding:16px 18px 14px;}
+.deck-viewer-head::-webkit-details-marker{display:none;}
+.deck-toggle-label{display:block;margin-top:4px;font-size:.78rem;font-weight:600;color:var(--accent);}
+.deck-viewer[open] .deck-toggle-label{font-size:0;}
+.deck-viewer[open] .deck-toggle-label::after{content:"Collapse slides";font-size:.78rem;}
+.deck-viewer-head:focus-visible{outline:2px solid var(--accent);outline-offset:-3px;}
 .deck-kicker{display:block;margin-bottom:3px;font-size:.7rem;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--accent);}
 .deck-title{display:block;font-size:.95rem;line-height:1.4;color:var(--ink);}
 .deck-count{flex:none;padding:5px 9px;border:1px solid var(--line);border-radius:999px;background:var(--soft);font-size:.76rem;font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums;}
@@ -516,14 +521,15 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
         <span class="chev"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
       </button>
       <div class="acc-body" id="case-rag-body">
-      <div class="deck-viewer" id="analytics-deck" tabindex="0" role="group" aria-label="Self-service analytics presentation">
-        <div class="deck-viewer-head">
+      <details class="deck-viewer" id="analytics-deck" aria-label="Self-service analytics presentation">
+        <summary class="deck-viewer-head">
           <div>
             <span class="deck-kicker">Product deep dive</span>
             <strong class="deck-title" id="deck-slide-title">From analyst bottleneck to self-service analytics</strong>
+            <span class="deck-toggle-label">Expand slides</span>
           </div>
           <span class="deck-count" aria-live="polite"><span id="deck-current">1</span> / 14</span>
-        </div>
+        </summary>
         <div class="deck-stage">
           <img id="deck-slide-image" src="deck-slides/self-service-analytics-01.webp" alt="Presentation slide 1: From analyst bottleneck to self-service analytics" width="1467" height="825" loading="lazy" decoding="async">
         </div>
@@ -538,7 +544,7 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
           </div>
         </div>
         <p class="deck-hint">Use the arrow keys or swipe to navigate.</p>
-      </div>
+      </details>
       <div class="acc-inner cs">
         <div class="tldr"><dl>
           <dt>Users</dt><dd>100+ internal users at AiDash; separate from IVMS's 100+ external utility customer base.</dd>
@@ -571,14 +577,15 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
         <a class="acc-link" href="https://decisionos-prototype.vercel.app/" target="_blank" rel="noopener">Explore interactive prototype ↗</a>
       </div>
       <div class="acc-body" id="decisionos-body">
-      <div class="deck-viewer" id="decisionos-deck" tabindex="0" role="group" aria-label="DecisionOS product case study presentation">
-        <div class="deck-viewer-head">
+      <details class="deck-viewer" id="decisionos-deck" aria-label="DecisionOS product case study presentation">
+        <summary class="deck-viewer-head">
           <div>
             <span class="deck-kicker">Independent product case study</span>
             <strong class="deck-title" id="decisionos-deck-slide-title">Reimagine CRM around the buyer’s decision</strong>
+            <span class="deck-toggle-label">Expand slides</span>
           </div>
           <span class="deck-count" aria-live="polite"><span id="decisionos-deck-current">1</span> / 18</span>
-        </div>
+        </summary>
         <div class="deck-stage">
           <img id="decisionos-deck-slide-image" src="decisionos/slides/decisionos-01.webp" alt="Presentation slide 1: Reimagine CRM around the buyer’s decision" width="1467" height="826" loading="lazy" decoding="async">
         </div>
@@ -593,7 +600,7 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
           </div>
         </div>
         <p class="deck-hint">Use the arrow keys or swipe to navigate.</p>
-      </div>
+      </details>
       <div class="acc-inner cs">
         <div class="case-snapshot">
           <div class="snapshot-card"><h5>Problem</h5><p>Seller progress ≠ buyer progress. CRM activities and stages can leave unresolved stakeholders, decision criteria, approvals and commitments out of view.</p></div>
@@ -900,9 +907,15 @@ nav.scrolled{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(11,17,32
         deckBody.style.maxHeight = deckBody.scrollHeight + 'px';
       }
     }
+    deckViewer.addEventListener('toggle', function(){
+      var acc = deckViewer.closest('.acc');
+      var body = deckViewer.closest('.acc-body');
+      if(acc.classList.contains('open')) body.style.maxHeight = body.scrollHeight + 'px';
+    });
     deckPrev.addEventListener('click', function(){ renderDeckSlide(deckIndex - 1); });
     deckNext.addEventListener('click', function(){ renderDeckSlide(deckIndex + 1); });
     deckViewer.addEventListener('keydown', function(e){
+      if(!deckViewer.open) return;
       if(['ArrowLeft','ArrowRight','Home','End'].indexOf(e.key) === -1) return;
       e.preventDefault();
       if(e.key === 'ArrowLeft') renderDeckSlide(deckIndex - 1);
